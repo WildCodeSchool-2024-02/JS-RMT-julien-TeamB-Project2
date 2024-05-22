@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -18,8 +19,10 @@ const router = createBrowserRouter([
     element: <Catalog />,
   },
   {
-    path: "/Article",
+    path: "/article",
     element: <Article />,
+    loader: () =>
+      axios.get("http://localhost:3310/api/games").then((res) => res.data),
   },
   {
     path: "/Panier",
