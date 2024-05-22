@@ -1,5 +1,7 @@
 const express = require("express");
 
+const games = require('../database/data');
+
 const router = express.Router();
 
 /* ************************************************************************* */
@@ -7,7 +9,7 @@ const router = express.Router();
 /* ************************************************************************* */
 // Route to get a list of items
 router.get("/games", (req, res) => {
-  res.send("Hello");
+  res.status(200).json(games);
 });
 /* ************************************************************************* */
 
