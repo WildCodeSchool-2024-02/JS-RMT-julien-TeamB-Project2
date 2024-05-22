@@ -23,7 +23,7 @@ function VideoGames() {
 
 
   return (
-    <div>
+    <div className="Card-Div">
       <h1 className="Catalogue">Catalogue</h1>
       <ul className="GameCard-UL">
         {games.map(game => (

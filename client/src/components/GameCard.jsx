@@ -2,7 +2,7 @@ import './Catalog.css';
 
 function GameCard({ game }) {
   return (
-    <li>
+    <li className='GameCard-LI'>
       <div className="Top">
         <img className="GameImg" src={game.image} alt={game.title} />
       </div>

@@ -1,10 +1,10 @@
 .GameCard-UL {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 5rem;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   list-style: none;
+  padding: 0;
+  margin: 20px;
 }
 
 .Catalogue {
@@ -18,39 +18,23 @@
   color: #36941f;
 }
 
-.GameImg {
-  width: 40rem;
-  height: 40rem;
-  border-radius: 2%;
-  object-fit: cover;
-  object-position: center;
+.Card-Div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
-@media screen and (max-width: 767px) {
+.GameImg {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 10rem;
+}
+
+@media (max-width: 768px) {
   .GameCard-UL {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5rem;
-    justify-content: space-around;
-    list-style: none;
-  }
-  .GameImg {
-    width: 20rem;
-    height: 20rem;
-    border-radius: 2%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .Catalogue {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    color: #36941f;
-  }
-
-  .Bottom {
-    color: #36941f;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
