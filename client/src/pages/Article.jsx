@@ -1,7 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import "./App.css";
 
-function App() {
+function Article() {
   const games = useLoaderData();
   console.info(games);
 
@@ -12,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default Article;

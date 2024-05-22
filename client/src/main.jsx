@@ -5,11 +5,32 @@ import axios from "axios";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
+import Catalog from "./pages/Catalog";
+import Article from "./pages/Article";
+import Cart from "./pages/Cart";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/App",
     element: <App />,
+    loader: () =>
+      axios.get("http://localhost:3310/api/games").then((res) => res.games),
+  },
+  {
+    path: "/",
+    element: <Catalog />,
+    loader: () =>
+      axios.get("http://localhost:3310/api/games").then((res) => res.games),
+  },
+  {
+    path: "/Article",
+    element: <Article />,
+    loader: () =>
+      axios.get("http://localhost:3310/api/games").then((res) => res.games),
+  },
+  {
+    path: "/Panier",
+    element: <Cart />,
     loader: () =>
       axios.get("http://localhost:3310/api/games").then((res) => res.games),
   },
