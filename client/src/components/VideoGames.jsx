@@ -25,7 +25,7 @@ function VideoGames() {
   return (
     <div>
       <h1 className="Catalogue">Catalogue</h1>
-      <ul>
+      <ul className="GameCard-UL">
         {games.map(game => (
           <GameCard key={game.id} game={game} />
         ))}

@@ -1,0 +1,56 @@
+.GameCard-UL {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.Catalogue {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  color: #36941f;
+}
+
+.Bottom {
+  color: #36941f;
+}
+
+.GameImg {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 2%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 767px) {
+  .GameCard-UL {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: space-around;
+    list-style: none;
+  }
+  .GameImg {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 2%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .Catalogue {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: #36941f;
+  }
+
+  .Bottom {
+    color: #36941f;
+  }
+}
