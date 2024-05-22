@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import axios from "axios";
+// import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -13,26 +13,18 @@ const router = createBrowserRouter([
   {
     path: "/App",
     element: <App />,
-    loader: () =>
-      axios.get("http://localhost:3310/api/games").then((res) => res.games),
   },
   {
     path: "/",
     element: <Catalog />,
-    loader: () =>
-      axios.get("http://localhost:3310/api/games").then((res) => res.games),
   },
   {
     path: "/Article",
     element: <Article />,
-    loader: () =>
-      axios.get("http://localhost:3310/api/games").then((res) => res.games),
   },
   {
     path: "/Panier",
     element: <Cart />,
-    loader: () =>
-      axios.get("http://localhost:3310/api/games").then((res) => res.games),
   },
 ]);
 
