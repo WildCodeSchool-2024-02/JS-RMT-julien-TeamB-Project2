@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -23,10 +23,11 @@ const router = createBrowserRouter([
     element: <Article />,
   },
   {
-    path: "/Panier",
+    path: "/panier",
     element: <Cart />,
-    loader: () =>
-      axios.get("http://localhost:3310/api/games").then((res) => res.games),
+    loader: () => axios
+      .get("http://localhost:3310/api/games")
+      .then((res) => res.data)
   },
 ]);
 
