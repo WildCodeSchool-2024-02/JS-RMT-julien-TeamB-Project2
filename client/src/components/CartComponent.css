@@ -1,0 +1,21 @@
+.cartContainer {
+  display: flex;
+  align-items: center;
+  width: 70rem;
+  background: rgb(108, 141, 33);
+  background: linear-gradient(
+    3deg,
+    rgba(108, 141, 33, 1) 0%,
+    rgba(30, 39, 9, 1) 100%
+  );
+  border: solid 1px black;
+  margin: 0.5rem 0.5rem;
+  border-radius: 1rem;
+
+  img {
+    height: 100px;
+    width: 100px;
+    margin: 2rem;
+    border-radius: 1rem;
+  }
+}
