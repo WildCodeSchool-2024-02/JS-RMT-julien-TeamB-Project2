@@ -1,8 +1,8 @@
 function Catalog() {
   return (
-    <main>
-      <h1>Bienvenu</h1>
-    </main>
+    <section className="">
+      <h1>Catalogue</h1>
+    </section>
   );
 }
 
