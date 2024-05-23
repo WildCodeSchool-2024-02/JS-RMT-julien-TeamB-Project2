@@ -1,15 +1,31 @@
+.shopContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cartContainer {
   display: flex;
   align-items: center;
-  width: 70rem;
-  border: solid 1px black;
-  margin: 0.5rem 0.5rem;
-  border-radius: 1rem;
-
+  width: 60%;
+  height: 8rem;
+  border: solid 1px rgb(48, 47, 47);
+  margin: 1rem 0.5rem;
+  border-radius: 2rem;
   img {
     height: 100px;
     width: 100px;
     margin: 2rem;
     border-radius: 1rem;
+    object-fit: cover;
   }
+  h2 {
+    color: #36941f;
+    margin: 0 1rem;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
 }
