@@ -37,4 +37,7 @@
   .GameCard-UL {
     grid-template-columns: repeat(2, 1fr);
   }
+  .Bottom {
+    text-align: centergit;
+  }
 }
