@@ -8,7 +8,7 @@ import "./Navigation.css";
 
 function Navigation() {
   return (
-    <nav className="navContainer">
+    <nav className="navContainer bgNavigation">
       <ul className="buttonContainer">
         <Link className="noTextDecoration" to="/app">
           <img className="logoSize" src={logoGamingZone} alt="logo" />
