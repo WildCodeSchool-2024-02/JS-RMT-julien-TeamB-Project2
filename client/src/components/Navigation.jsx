@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import logoGamingZone from "../assets/images/logoGamingZone.png";
+import logoPanier from "../assets/images/logoPanier.png";
 
 import "../App.css";
 import "./Navigation.css";
@@ -19,7 +20,7 @@ function Navigation() {
           Article
         </Link>
         <Link className="noTextDecoration" to="/panier">
-          Panier
+          <img className="logoSize" src={logoPanier} alt="logo" />
         </Link>
       </ul>
     </nav>
