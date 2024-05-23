@@ -1,0 +1,12 @@
+.logoSize {
+  max-height: 8rem;
+}
+
+.navContainer {
+  margin: 1.5rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+}
