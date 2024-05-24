@@ -8,7 +8,7 @@ function Cart() {
 
   return (
     <main>
-      <h1 className="cartTitle1">Mon panier</h1>
+      <h1>Mon panier</h1>
       <section className="cartMainContainer">
           {games.map((game) => (
               <CartComponent

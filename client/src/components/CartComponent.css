@@ -20,7 +20,7 @@
     border-radius: 1rem;
     object-fit: cover;
   }
-  .cartTitle2 {
+  h2 {
     color: #36941f;
     margin: 0 1rem;
   }
