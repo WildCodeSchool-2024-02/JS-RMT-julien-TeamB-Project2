@@ -8,9 +8,9 @@ function Article() {
   const game = useLoaderData();
   return (
     <main className="styleMain">
-       <Navigation />
+      <Navigation />
       <ArticleComponents game={game} />
-    <main/>
+    </main>
   );
 }
 
