@@ -1,31 +1,15 @@
-import { useEffect, useState } from "react";
-import axios from 'axios';
+import {useLoaderData}  from 'react-router-dom';
 import GameCard from './GameCard';
+import './VideoGames.css';
 
 function VideoGames() {
-  const [games, setGames] = useState([]);
 
-  useEffect(() => {
-    const apiUrl = 'http://localhost:3310/api/games';
-
-    const fetchGames = async () => {
-      try {
-        const response = await axios.get(apiUrl);
-        setGames(response.data);
-      } catch (error) {
-        console.error('Error fetching data: ', error);
-      }
-    };
-
-    fetchGames();
-  }, []);
-
-
+const games = useLoaderData()
 
   return (
-    <div className="Card-Div">
-      <h1 className="Catalogue">Catalogue</h1>
-      <ul className="GameCard-UL">
+    <div className="VideoGamesPage">
+      <h1 className="VideoGamesTitle">Catalogue</h1>
+      <ul className="VideoGamesCardContainer">
         {games.map(game => (
           <GameCard key={game.id} game={game} />
         ))}
@@ -36,8 +20,4 @@ function VideoGames() {
 
 export default VideoGames;
 
-
-
-
-  
 

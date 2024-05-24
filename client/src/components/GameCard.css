@@ -1,0 +1,17 @@
+.gamecardBottom {
+  color: #36941f;
+}
+
+.gameImg {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 10rem;
+}
+
+@media (max-width: 768px) {
+  .gamecardBottom {
+    text-align: center;
+  }
+}

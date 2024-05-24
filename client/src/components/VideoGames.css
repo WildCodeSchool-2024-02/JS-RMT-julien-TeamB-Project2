@@ -1,0 +1,28 @@
+.VideoGamesPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.VideoGamesTitle {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  color: #36941f;
+}
+
+.VideoGamesCardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .VideoGamesCardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
