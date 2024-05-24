@@ -1,7 +1,11 @@
+import VideoGames from "../components/VideoGames";
+import Navigation from "../components/Navigation";
+
 function Catalog() {
   return (
     <main>
-      <h1>Bienvenu</h1>
+      <Navigation />
+      <VideoGames />
     </main>
   );
 }

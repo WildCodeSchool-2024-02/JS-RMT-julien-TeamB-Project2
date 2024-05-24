@@ -1,6 +1,6 @@
 const express = require("express");
 
-const games = require('../database/data');
+const games = require("../database/data");
 
 const router = express.Router();
 
@@ -15,6 +15,15 @@ router.get("/games", (req, res) => {
 router.get("/basket", (req, res) => {
   const game = games.slice(0, 6);
   res.status(200).json(game);
+});
+
+router.get("/games/:id", (req, res) => {
+  const foundGame = games.find((game) => game.id === +req.params.id);
+  if (foundGame) {
+    res.status(200).json(foundGame);
+  } else {
+    res.status(200).json({});
+  }
 });
 /* ************************************************************************* */
 
