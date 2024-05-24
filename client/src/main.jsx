@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     element: <Article />,
     loader: async ({ params }) => {
       const res = await axios.get(
-        `http://localhost:3310/api/games/${params.id}`
+        `${import.meta.env.VITE_API_URL}/api/games/${params.id}`
       );
       return res.data;
     },

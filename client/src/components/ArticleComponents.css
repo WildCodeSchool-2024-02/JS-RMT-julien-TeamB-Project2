@@ -3,25 +3,24 @@
   justify-content: space-evenly;
   font-size: 1.5rem;
   color: #36941f;
-
   font-family: "AppleGaramondBoldItalic";
   align-items: center;
   padding: 5rem;
   gap: 3rem;
 
-  .articleImg {
+  img {
     max-width: 35vw;
     max-height: 25vw;
     border-radius: 5%;
   }
   .articleStyle {
-    .articleTitle {
+    h2 {
       display: flex;
       align-items: center;
       font-size: 1.5em;
       margin: 10px 15px;
     }
-    .articleDescription {
+    p {
       display: flex;
       text-align: left;
       margin: 1.5rem;
@@ -37,7 +36,7 @@
     justify-content: center;
     padding: 3rem 3rem;
 
-    .articleImg {
+    img {
       max-width: 60vw;
       max-height: 50vw;
     }

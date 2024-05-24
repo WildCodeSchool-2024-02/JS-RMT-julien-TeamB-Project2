@@ -13,7 +13,7 @@ router.get("/games/:id", (req, res) => {
   if (foundGame) {
     res.status(200).json(foundGame);
   } else {
-    res.status(404).json({ error: "Game not found" });
+    res.status(200).json({});
   }
 });
 /* ************************************************************************* */

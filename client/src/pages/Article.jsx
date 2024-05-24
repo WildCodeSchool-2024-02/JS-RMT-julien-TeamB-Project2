@@ -5,7 +5,7 @@ import "../App.css";
 function Article() {
   const game = useLoaderData();
   return (
-    <main className="articleMain">
+    <main className="styleMain">
       <ArticleComponents game={game} />
     </main>
   );
