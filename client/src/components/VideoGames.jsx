@@ -7,9 +7,9 @@ function VideoGames() {
 const games = useLoaderData()
 
   return (
-    <div className="VideoGamesPage">
-      <h1 className="VideoGamesTitle">Catalogue</h1>
-      <ul className="VideoGamesCardContainer">
+    <div className="videoGamesPage">
+      <h1 className="videoGamesTitle">Catalogue</h1>
+      <ul className="videoGamesCardContainer">
         {games.map(game => (
           <GameCard key={game.id} game={game} />
         ))}
