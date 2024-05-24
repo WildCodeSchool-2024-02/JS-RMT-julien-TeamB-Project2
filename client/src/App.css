@@ -1,7 +1,21 @@
+@font-face {
+  font-family: "CaviarDreamsBoldItalic";
+  src: url(./assets/CaviarDreamsBoldItalic.ttf);
+}
+@font-face {
+  font-family: "AppleGaramondBoldItalic";
+  src: url(./assets/AppleGaramondBoldItalic.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.styleMain {
+  background-image: linear-gradient(#424242, #111111);
+  background-size: cover;
 }
 
 .noTextDecoration {

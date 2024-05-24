@@ -1,10 +1,15 @@
+import { useLoaderData } from "react-router-dom";
+import ArticleComponents from "../components/ArticleComponents";
+import "../App.css";
+
 import Navigation from "../components/Navigation";
 
 function Article() {
+  const game = useLoaderData();
   return (
-    <main>
+    <main className="styleMain">
       <Navigation />
-      <h1>Bienvenu</h1>
+      <ArticleComponents game={game} />
     </main>
   );
 }
