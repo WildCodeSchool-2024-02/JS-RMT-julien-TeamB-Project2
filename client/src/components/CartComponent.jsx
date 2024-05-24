@@ -1,12 +1,12 @@
 import "./CartComponent.css";
 
-function CartComponent({ game }) {
+function CartComponent({ title, image, price }) {
   return (
-    <section className="cartContainer bgGradientCard">
-      <img src={game.image} alt={game.title} />
-      <div className="content">
-        <h2>{game.title}</h2>
-        <h2>{game.price} EUR</h2>
+    <section className="cartContainer cartBgGradient">
+      <img className="cartImg" src={image} alt={title} />
+      <div className="cartContent">
+        <h2 className="cartTitle2">{title}</h2>
+        <h2 className="cartTitle2">{price} EUR</h2>
       </div>
     </section>
   );

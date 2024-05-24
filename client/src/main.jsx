@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     path: "/panier",
     element: <Cart />,
     loader: () => axios
-      .get("http://localhost:3310/api/games")
+      .get("http://localhost:3310/api/basket")
       .then((res) => res.data)
   },
 ]);

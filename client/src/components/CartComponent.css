@@ -1,4 +1,4 @@
-.shopContainer {
+.cartMainContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,20 +13,20 @@
   border: solid 1px rgb(48, 47, 47);
   margin: 1rem 0.5rem;
   border-radius: 2rem;
-  img {
+  .cartImg {
     height: 100px;
     width: 100px;
     margin: 2rem;
     border-radius: 1rem;
     object-fit: cover;
   }
-  h2 {
+  .cartTitle2 {
     color: #36941f;
     margin: 0 1rem;
   }
 }
 
-.content {
+.cartContent {
   display: flex;
   padding: 7rem;
   gap: 8rem;
@@ -39,7 +39,7 @@
     height: 8rem;
     margin: 1rem 0.5rem;
     border-radius: 2rem;
-    img {
+    .cartImg {
       height: 86px;
       width: 60px;
       margin: 2rem;
@@ -48,7 +48,7 @@
     }
   }
 
-  .content {
+  .cartContent {
     display: flex;
     padding: 0rem;
     gap: 0rem;
