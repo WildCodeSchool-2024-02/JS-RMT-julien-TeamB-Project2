@@ -9,7 +9,6 @@ const router = express.Router();
 router.get("/games", (req, res) => {
   res.send("Hello");
 });
-
 /* ************************************************************************* */
 
 module.exports = router;
