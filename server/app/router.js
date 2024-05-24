@@ -12,6 +12,11 @@ router.get("/games", (req, res) => {
   res.status(200).json(games);
 });
 
+router.get("/basket", (req, res) => {
+  const game = games.slice(0, 6);
+  res.status(200).json(game);
+});
+
 router.get("/games/:id", (req, res) => {
   const foundGame = games.find((game) => game.id === +req.params.id);
   if (foundGame) {

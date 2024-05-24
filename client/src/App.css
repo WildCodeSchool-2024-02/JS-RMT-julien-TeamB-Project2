@@ -13,8 +13,21 @@
   box-sizing: border-box;
 }
 
-.styleMain {
+#root {
   background-image: linear-gradient(#424242, #111111);
+}
+
+.cartBgGradient {
+  background: rgb(108, 141, 33);
+  background: rgb(30, 39, 9);
+  background: linear-gradient(
+    0deg,
+    rgba(30, 39, 9, 1) 80%,
+    rgba(108, 141, 33, 1) 97%
+  );
+}
+
+.styleMain {
   background-size: cover;
 }
 
