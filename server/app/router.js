@@ -8,6 +8,10 @@ const router = express.Router();
 // Define Your API Routes Here
 /* ************************************************************************* */
 // Route to get a list of items
+router.get("/games", (req, res) => {
+  res.status(200).json(games);
+});
+
 router.get("/games/:id", (req, res) => {
   const foundGame = games.find((game) => game.id === +req.params.id);
   if (foundGame) {

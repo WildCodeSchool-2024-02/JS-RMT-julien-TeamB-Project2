@@ -17,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Catalog />,
+    loader: () =>
+      axios
+        .get(`${import.meta.env.VITE_API_URL}/api/games`)
+        .then((res) => res.data),
   },
   {
     path: "/articles/:id",
