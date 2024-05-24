@@ -8,10 +8,10 @@ import "./Navigation.css";
 
 function Navigation() {
   return (
-    <nav className="navContainer bgNavigation">
-      <ul className="buttonContainer">
+    <nav className="navContainer navBg">
+      <ul className="navButtonContainer">
         <Link className="noTextDecoration" to="/app">
-          <img className="logoSize" src={logoGamingZone} alt="logo" />
+          <img className="navLogoSize" src={logoGamingZone} alt="logo" />
         </Link>
         <Link className="noTextDecoration" to="/">
           Catalogue
@@ -20,7 +20,7 @@ function Navigation() {
           Article
         </Link>
         <Link className="noTextDecoration" to="/panier">
-          <img className="logoSize" src={logoPanier} alt="logo" />
+          <img className="navLogoSize" src={logoPanier} alt="logo" />
         </Link>
       </ul>
     </nav>

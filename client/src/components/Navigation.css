@@ -1,17 +1,17 @@
-.logoSize {
-  max-width: 5rem;
+.navBg {
+  background-image: linear-gradient(#6b6b6b, #424242);
 }
 
 .navContainer {
   padding: 1rem;
 }
 
-.buttonContainer {
+.navButtonContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.bgNavigation {
-  background-image: linear-gradient(#6b6b6b, #424242);
+.navLogoSize {
+  max-width: 5rem;
 }
