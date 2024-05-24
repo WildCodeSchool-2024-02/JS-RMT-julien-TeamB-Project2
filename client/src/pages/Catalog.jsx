@@ -1,10 +1,11 @@
-import VideoGames from '../components/VideoGames'
-
+import VideoGames from "../components/VideoGames";
+import Navigation from "../components/Navigation";
 
 function Catalog() {
   return (
     <main>
-      <VideoGames/>
+      <Navigation />
+      <VideoGames />
     </main>
   );
 }
