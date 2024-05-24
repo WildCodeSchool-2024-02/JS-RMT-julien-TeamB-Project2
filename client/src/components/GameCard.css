@@ -1,8 +1,8 @@
-.gamecardBottom {
+.gameCardBottom {
   color: #36941f;
 }
 
-.gameImg {
+.gameCardImg {
   width: 100%;
   max-width: 400px;
   object-fit: cover;
@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 768px) {
-  .gamecardBottom {
+  .gameCardBottom {
     text-align: center;
   }
 }

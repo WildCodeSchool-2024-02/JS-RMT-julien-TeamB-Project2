@@ -3,9 +3,9 @@ import VideoGames from '../components/VideoGames'
 
 function Catalog() {
   return (
-    <section>
+    <main>
       <VideoGames/>
-    </section>
+    </main>
   );
 }
 
