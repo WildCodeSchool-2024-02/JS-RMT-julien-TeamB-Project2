@@ -19,10 +19,14 @@ const router = createBrowserRouter([
     element: <Catalog />,
   },
   {
-    path: "/article",
+    path: "/articles/:id",
     element: <Article />,
-    loader: () =>
-      axios.get("http://localhost:3310/api/games").then((res) => res.data),
+    loader: async ({ params }) => {
+      const res = await axios.get(
+        `http://localhost:3310/api/games/${params.id}`
+      );
+      return res.data;
+    },
   },
   {
     path: "/Panier",
