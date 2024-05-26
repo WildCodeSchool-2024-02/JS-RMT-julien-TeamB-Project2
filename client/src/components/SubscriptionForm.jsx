@@ -1,6 +1,11 @@
 import  { useState } from 'react';
 import './Footer.css';
 
+import facebookImg from "../assets/images/facebook.png";
+import instagramImg from "../assets/images/instagram.png";
+import youtubeImg from "../assets/images/youtube.png";
+
+
 function SubscriptionForm  ({ onSubscribe })  {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -14,6 +19,17 @@ function SubscriptionForm  ({ onSubscribe })  {
 
   return (
     <div className='footer'>
+      <div className='iconSocial'>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <img className='IconFooter' src={facebookImg} alt="facebook"/>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <img className='IconFooter' src={instagramImg} alt="instagram" />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <img className='IconFooter' src={youtubeImg} alt="youtube" />
+          </a>  
+      </div>
       <h2 className='titleNewsLetter'>Subscribe to our Newsletter</h2>
       <form className='emailSubscription' onSubmit={handleSubmit}>
         <input
