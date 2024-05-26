@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import { Link } from "react-router-dom";
-import './Footer.css';
+import './SubscriptionForm.css';
 
 
 import facebookImg from "../assets/images/facebook.png";
