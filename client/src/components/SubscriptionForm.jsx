@@ -1,5 +1,7 @@
 import  { useState } from 'react';
+import { Link } from "react-router-dom";
 import './Footer.css';
+
 
 import facebookImg from "../assets/images/facebook.png";
 import instagramImg from "../assets/images/instagram.png";
@@ -19,7 +21,7 @@ function SubscriptionForm  ({ onSubscribe })  {
   };
 
   return (
-    <div className='footer'>
+    <div className='footerContainer'>
       <div className='iconSocial'>
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
           <img className='iconFooter' src={facebookImg} alt="facebook"/>
@@ -32,22 +34,25 @@ function SubscriptionForm  ({ onSubscribe })  {
           </a>  
       </div>
       <div>
-        <img src={logoFooter} alt="gamingZoneLogo" />
+        <Link to="/app">
+          <img className='logoFooter' src={logoFooter} alt="gamingZoneLogo" />
+        </Link>
       </div>
-      <h2 className='titleNewsLetter'>Subscribe to our Newsletter</h2>
+      <div>
+      <h2 className='titleNewsLetter'>Newsletter</h2>
       <form className='emailSubscription' onSubmit={handleSubmit}>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
           required
         />
-        <button type="submit">Subscribe</button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p className='messageNewsLetter'>{message}</p>}
+      </div>
     </div>
   );
 };
 
 export default SubscriptionForm;
+

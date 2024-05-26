@@ -11,9 +11,7 @@ function Footer() {
   };
 
   return (
-    <div>
       <SubscriptionForm onSubscribe={handleSubscribe} />
-    </div>
   );
 }
 
