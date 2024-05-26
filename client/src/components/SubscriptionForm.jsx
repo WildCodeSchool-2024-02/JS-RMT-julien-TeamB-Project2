@@ -4,6 +4,7 @@ import './Footer.css';
 import facebookImg from "../assets/images/facebook.png";
 import instagramImg from "../assets/images/instagram.png";
 import youtubeImg from "../assets/images/youtube.png";
+import logoFooter from "../assets/images/logoFooter.png";
 
 
 function SubscriptionForm  ({ onSubscribe })  {
@@ -21,14 +22,17 @@ function SubscriptionForm  ({ onSubscribe })  {
     <div className='footer'>
       <div className='iconSocial'>
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-          <img className='IconFooter' src={facebookImg} alt="facebook"/>
+          <img className='iconFooter' src={facebookImg} alt="facebook"/>
           </a>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-          <img className='IconFooter' src={instagramImg} alt="instagram" />
+          <img className='iconFooter' src={instagramImg} alt="instagram" />
           </a>
           <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-            <img className='IconFooter' src={youtubeImg} alt="youtube" />
+            <img className='iconFooter' src={youtubeImg} alt="youtube" />
           </a>  
+      </div>
+      <div>
+        <img src={logoFooter} alt="gamingZoneLogo" />
       </div>
       <h2 className='titleNewsLetter'>Subscribe to our Newsletter</h2>
       <form className='emailSubscription' onSubmit={handleSubmit}>
