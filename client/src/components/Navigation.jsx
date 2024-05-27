@@ -16,7 +16,7 @@ function Navigation() {
         <Link className="noTextDecoration" to="/">
           Catalogue
         </Link>
-        <Link className="noTextDecoration" to="/article">
+        <Link className="noTextDecoration" to="/articles/:id">
           Article
         </Link>
         <Link className="noTextDecoration" to="/panier">
