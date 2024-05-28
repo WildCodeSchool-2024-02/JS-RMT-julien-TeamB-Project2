@@ -1,5 +1,5 @@
 .gameCardBottom {
-  color: #36941f;
+  color: var(--color-text);
 }
 
 .gameCardImg {

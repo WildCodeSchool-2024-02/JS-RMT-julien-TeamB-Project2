@@ -21,7 +21,7 @@
     object-fit: cover;
   }
   h2 {
-    color: #36941f;
+    color: var(--color-text);
     margin: 0 1rem;
   }
 }

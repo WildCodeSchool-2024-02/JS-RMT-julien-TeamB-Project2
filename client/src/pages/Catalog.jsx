@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation";
 
 function Catalog() {
   return (
-    <main>
+    <main className="bgColorMain">
       <Navigation />
       <VideoGames />
     </main>

@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   padding: 2rem;
-  color: #36941f;
+  color: var(--color-text);
 }
 
 .videoGamesCardContainer {

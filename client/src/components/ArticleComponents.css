@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   font-size: 1.5rem;
-  color: #36941f;
+  color: var(--color-text);
   font-family: "AppleGaramondBoldItalic";
   align-items: center;
   padding: 5rem;

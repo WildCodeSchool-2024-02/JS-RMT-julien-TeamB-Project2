@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 import logoGamingZone from "../assets/images/logoGamingZone.png";
+import logoCategorie from "../assets/images/logoCategorie.png";
+import logoRechercher from "../assets/images/logoRechercher.png";
 import logoPanier from "../assets/images/logoPanier.png";
 
 import "../App.css";
@@ -14,10 +16,10 @@ function Navigation() {
           <img className="navLogoSize" src={logoGamingZone} alt="logo" />
         </Link>
         <Link className="noTextDecoration" to="/">
-          Catalogue
+          <img className="navLogoSize" src={logoCategorie} alt="logo" />
         </Link>
         <Link className="noTextDecoration" to="/articles/:id">
-          Article
+          <img className="navLogoSize" src={logoRechercher} alt="logo" />
         </Link>
         <Link className="noTextDecoration" to="/panier">
           <img className="navLogoSize" src={logoPanier} alt="logo" />

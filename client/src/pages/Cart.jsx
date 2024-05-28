@@ -8,7 +8,7 @@ function Cart() {
   const games = useLoaderData();
 
   return (
-    <main>
+    <main className="bgColorMain">
       <Navigation />
       <h1>Mon panier</h1>
       <section className="cartMainContainer">

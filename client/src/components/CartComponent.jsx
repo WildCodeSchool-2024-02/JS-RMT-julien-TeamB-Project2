@@ -2,7 +2,7 @@ import "./CartComponent.css";
 
 function CartComponent({ title, image, price }) {
   return (
-    <section className="cartContainer cartBgGradient">
+    <section className="cartContainer bgCartContainer">
       <img className="cartImg" src={image} alt={title} />
       <div className="cartContent">
         <h2>{title}</h2>
