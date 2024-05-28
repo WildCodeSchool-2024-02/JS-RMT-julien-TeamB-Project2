@@ -1,7 +1,11 @@
 import "./ArticleComponents.css";
 import "../App.css";
+import { useCart } from "../context/CartContext";
 
 function ArticleComponents({ game }) {
+
+  const { addToCart } = useCart();
+
   return (
     <section className="articleContainer">
       <img src={game.image} alt={game.title} />
@@ -12,6 +16,7 @@ function ArticleComponents({ game }) {
         <p>Date de Sortie: {game.release_date}</p>
         <p>Développeur:{game.developer}</p>
         <p>Prix: {game.price}€</p>
+        <button type="button" onClick={() => addToCart(game)}>Ajouter au panier</button>
       </div>
     </section>
   );

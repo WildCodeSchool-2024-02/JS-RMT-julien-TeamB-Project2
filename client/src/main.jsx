@@ -4,6 +4,8 @@ import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { CartProvider } from "./context/CartContext";
+
 import App from "./App";
 import Catalog from "./pages/Catalog";
 import Article from "./pages/Article";
@@ -23,7 +25,7 @@ const router = createBrowserRouter([
         .then((res) => res.data),
   },
   {
-    path: "/articles/:id",
+    path: "/article/:id",
     element: <Article />,
     loader: async ({ params }) => {
       const res = await axios.get(
@@ -35,10 +37,6 @@ const router = createBrowserRouter([
   {
     path: "/panier",
     element: <Cart />,
-    loader: () =>
-      axios
-        .get(`${import.meta.env.VITE_API_URL}/api/basket`)
-        .then((res) => res.data),
   },
 ]);
 
@@ -46,6 +44,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>
 );
