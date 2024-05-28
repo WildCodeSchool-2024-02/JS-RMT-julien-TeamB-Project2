@@ -12,16 +12,16 @@ function Navigation() {
   return (
     <nav className="navContainer navBg">
       <ul className="navButtonContainer">
-        <Link className="noTextDecoration" to="/app">
+        <Link to="/app">
           <img className="navLogoSize" src={logoGamingZone} alt="logo" />
         </Link>
-        <Link className="noTextDecoration" to="/">
+        <Link to="/">
           <img className="navLogoSize" src={logoCategorie} alt="logo" />
         </Link>
-        <Link className="noTextDecoration" to="/articles/:id">
+        <Link to="/articles/:id">
           <img className="navLogoSize" src={logoRechercher} alt="logo" />
         </Link>
-        <Link className="noTextDecoration" to="/panier">
+        <Link to="/panier">
           <img className="navLogoSize" src={logoPanier} alt="logo" />
         </Link>
       </ul>

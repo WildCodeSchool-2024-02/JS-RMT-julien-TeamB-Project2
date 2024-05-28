@@ -25,7 +25,7 @@
   --bg-color-dropdown: #545454;
   --font-size-title-h1: 2rem;
   --font-size-title-h2: 1.5rem;
-  --font-size-text: 1.5rem;
+  --font-size-text: 1rem;
 }
 
 .bgColorMain {
@@ -40,14 +40,17 @@
 .styleTitleH1 {
   color: var(--color-text);
   font-size: var(--font-size-title-h1);
+  font-family: "AppleGaramondBoldItalic";
 }
 .styleTitleH2 {
   color: var(--color-text);
   font-size: var(--font-size-title-h2);
+  font-family: "AppleGaramondBoldItalic";
 }
 .styleText {
   color: var(--color-text);
   font-size: var(--font-size-text);
+  font-family: "CaviarDreamsBoldItalic";
 }
 
 .noTextDecoration {

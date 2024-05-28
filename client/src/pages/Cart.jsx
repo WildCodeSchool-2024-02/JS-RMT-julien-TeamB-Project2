@@ -10,7 +10,7 @@ function Cart() {
   return (
     <main className="bgColorMain">
       <Navigation />
-      <h1>Mon panier</h1>
+      <h1 className="styleTitleH1">Mon panier</h1>
       <section className="cartMainContainer">
         {games.map((game) => (
           <CartComponent

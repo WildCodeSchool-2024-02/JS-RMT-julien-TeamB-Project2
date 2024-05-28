@@ -5,8 +5,8 @@ function CartComponent({ title, image, price }) {
     <section className="cartContainer bgCartContainer">
       <img className="cartImg" src={image} alt={title} />
       <div className="cartContent">
-        <h2>{title}</h2>
-        <h2>{price} EUR</h2>
+        <h2 className="styleTitleH2">{title}</h2>
+        <p className="styleText">{price} EUR</p>
       </div>
     </section>
   );

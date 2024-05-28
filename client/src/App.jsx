@@ -5,7 +5,7 @@ function App() {
   return (
     <main className="bgColorMain">
       <Navigation />
-      <h1>Bienvenu</h1>
+      <h1 className="styleTitleH1">Bienvenue</h1>
     </main>
   );
 }

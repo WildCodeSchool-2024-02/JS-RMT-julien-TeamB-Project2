@@ -1,7 +1,3 @@
-.gameCardBottom {
-  color: var(--color-text);
-}
-
 .gameCardImg {
   width: 100%;
   max-width: 400px;

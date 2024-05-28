@@ -1,9 +1,6 @@
 .articleContainer {
   display: flex;
   justify-content: space-evenly;
-  font-size: 1.5rem;
-  color: var(--color-text);
-  font-family: "AppleGaramondBoldItalic";
   align-items: center;
   padding: 5rem;
   gap: 3rem;
@@ -17,7 +14,6 @@
     h2 {
       display: flex;
       align-items: center;
-      font-size: 1.5em;
       margin: 10px 15px;
     }
     p {
