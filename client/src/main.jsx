@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         .then((res) => res.data),
   },
   {
-    path: "/article/:id",
+    path: "/articles/:id",
     element: <Article />,
     loader: async ({ params }) => {
       const res = await axios.get(
