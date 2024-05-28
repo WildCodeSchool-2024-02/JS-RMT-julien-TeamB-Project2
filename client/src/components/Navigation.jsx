@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 import logoGamingZone from "../assets/images/logoGamingZone.png";
 import logoCategory from "../assets/images/logoCategory.png";
-import logoRechercher from "../assets/images/logoRechercher.png";
-import logoPanier from "../assets/images/logoPanier.png";
+import logoSearch from "../assets/images/logoSearch.png";
+import logoCart from "../assets/images/logoCart.png";
 
 import "../App.css";
 import "./Navigation.css";
@@ -27,14 +27,10 @@ function Navigation() {
           />
         </Link>
         <Link to="/articles/:id">
-          <img
-            className="navLogoSize"
-            src={logoRechercher}
-            alt="Logo rechercher"
-          />
+          <img className="navLogoSize" src={logoSearch} alt="Logo rechercher" />
         </Link>
         <Link to="/panier">
-          <img className="navLogoSize" src={logoPanier} alt="Logo panier" />
+          <img className="navLogoSize" src={logoCart} alt="Logo panier" />
         </Link>
       </ul>
     </nav>
