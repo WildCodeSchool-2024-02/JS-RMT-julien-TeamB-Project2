@@ -5,7 +5,6 @@ const games = [
     image:
       "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png",
     genre: "Action RPG",
-
     platforms: ["PlayStation 4", "Xbox One", "PC"],
     release_date: "2015-05-19",
     developer: "CD Projekt Red",
