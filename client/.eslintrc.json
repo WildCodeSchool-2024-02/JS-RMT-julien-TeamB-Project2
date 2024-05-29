@@ -26,6 +26,7 @@
         "assert": "either"
       }
     ],
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "react/jsx-no-constructed-context-values": "off"
   }
 }

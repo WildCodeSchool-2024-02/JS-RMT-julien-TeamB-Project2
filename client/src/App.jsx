@@ -4,10 +4,11 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <main>
+    <main className="bgColorMain">
       <Navigation />
-      <h1>Bienvenu</h1>
+      <h1 className="styleTitleH1">Bienvenue</h1>
       <Footer />
+
     </main>
   );
 }

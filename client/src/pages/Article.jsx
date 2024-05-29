@@ -8,7 +8,7 @@ import Navigation from "../components/Navigation";
 function Article() {
   const game = useLoaderData();
   return (
-    <main className="styleMain">
+    <main className="bgColorMain">
       <Navigation />
       <ArticleComponents game={game} />
       <Footer/>
