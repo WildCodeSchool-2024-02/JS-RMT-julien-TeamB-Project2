@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import ArticleComponents from "../components/ArticleComponents";
+import Footer from "../components/Footer";
 import "../App.css";
 
 import Navigation from "../components/Navigation";
@@ -10,6 +11,7 @@ function Article() {
     <main className="bgColorMain">
       <Navigation />
       <ArticleComponents game={game} />
+      <Footer/>
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import VideoGames from "../components/VideoGames";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 function Catalog() {
   const genres = useLoaderData();
@@ -14,6 +15,7 @@ function Catalog() {
           <VideoGames key={genre} genre={genre} />
         ))}
       </div>
+      <Footer />
     </main>
   );
 }
