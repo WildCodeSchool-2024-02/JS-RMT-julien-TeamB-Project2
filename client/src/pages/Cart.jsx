@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import CartComponent from "../components/CartComponent";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import "../components/CartComponent.css";
 import "../App.css";
 
@@ -21,6 +22,7 @@ function Cart() {
           />
         ))}
       </section>
+      <Footer/>
     </main>
   );
 }
