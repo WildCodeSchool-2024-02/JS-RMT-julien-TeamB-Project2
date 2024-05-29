@@ -7,6 +7,7 @@ import "../App.css";
 
 function Cart() {
   const { cart } = useCart();
+  const total = cart.reduce((acc, game) => acc + game.price, 0);
 
   return (
     <main className="bgColorMain">
@@ -26,8 +27,9 @@ function Cart() {
             />
           ))
         )}
+        <h2>Total: {total} €</h2>
       </section>
-      <Footer/>
+      <Footer />
     </main>
   );
 }
