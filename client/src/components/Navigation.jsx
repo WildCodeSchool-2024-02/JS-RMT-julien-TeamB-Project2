@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
+import GameSearch from "./GameSearch";
 
 import logoGamingZone from "../assets/images/logoGamingZone.png";
 import logoCategory from "../assets/images/logoCategory.png";
-import logoSearch from "../assets/images/logoSearch.png";
 import logoCart from "../assets/images/logoCart.png";
 
 import "../App.css";
@@ -26,9 +26,7 @@ function Navigation() {
             alt="Logo catégorie"
           />
         </Link>
-        <Link to="/articles/:id">
-          <img className="navLogoSize" src={logoSearch} alt="Logo rechercher" />
-        </Link>
+        <GameSearch  />
         <Link to="/panier">
           <img className="navLogoSize" src={logoCart} alt="Logo panier" />
         </Link>
