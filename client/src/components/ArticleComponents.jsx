@@ -3,7 +3,6 @@ import "../App.css";
 import { useCart } from "../context/CartContext";
 
 function ArticleComponents({ game }) {
-
   const { addToCart } = useCart();
 
   return (
@@ -16,6 +15,9 @@ function ArticleComponents({ game }) {
         <p className="styleText">Date de Sortie: {game.release_date}</p>
         <p className="styleText">Développeur:{game.developer}</p>
         <p className="styleText">Prix: {game.price}€</p>
+        <button type="button" onClick={() => addToCart(game)}>
+          Ajouter au panier
+        </button>
       </div>
     </section>
   );
