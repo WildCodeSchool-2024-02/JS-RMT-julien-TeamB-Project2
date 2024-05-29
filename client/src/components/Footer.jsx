@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SubscriptionForm from "./SubscriptionForm";
+import Social from "./Social";
 
 import facebookImg from "../assets/images/facebook.png";
 import instagramImg from "../assets/images/instagram.png";
@@ -9,38 +10,26 @@ import linkedinImg from "../assets/images/linkedin.png";
 
 function Footer() {
   return (
-    <div className="footerContainer">
-      <div className="iconSocial">
-        <a
+    <footer className="footerContainer">
+      <section className="iconSocial">
+        <Social
           href="https://www.facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="iconFooter" src={facebookImg} alt="facebook" />
-        </a>
-        <a
+          src={facebookImg}
+          alt="facebook"
+        />
+        <Social
           href="https://www.instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="iconFooter" src={instagramImg} alt="instagram" />
-        </a>
-        <a
-          href="https://www.youtube.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="iconFooter" src={youtubeImg} alt="youtube" />
-        </a>
-        <a
+          src={instagramImg}
+          alt="instagram"
+        />
+        <Social href="https://www.youtube.com" src={youtubeImg} alt="youtube" />
+        <Social
           href="https://www.linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="iconFooter" src={linkedinImg} alt="linkedin" />
-        </a>
-      </div>
-      <div>
+          src={linkedinImg}
+          alt="linkedin"
+        />
+      </section>
+      <section>
         <Link to="/app">
           <img
             className="logoFooter"
@@ -48,9 +37,9 @@ function Footer() {
             alt="gamingZoneLogo"
           />
         </Link>
-      </div>
+      </section>
       <SubscriptionForm />
-    </div>
+    </footer>
   );
 }
 

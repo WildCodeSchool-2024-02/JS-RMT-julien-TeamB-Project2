@@ -19,5 +19,3 @@ const games = useLoaderData()
 }
 
 export default VideoGames;
-
-

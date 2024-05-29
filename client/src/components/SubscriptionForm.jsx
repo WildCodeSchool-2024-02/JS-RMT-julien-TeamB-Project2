@@ -19,7 +19,7 @@ function SubscriptionForm() {
   };
 
   return (
-    <div>
+    <section>
       <h2 className="titleNewsLetter">Newsletter</h2>
       <form className="emailSubscription" ref={form} onSubmit={sendEmail}>
         <input
@@ -31,7 +31,7 @@ function SubscriptionForm() {
         />
         <input className="buttonNewsLetter" type="submit" value="Send" />
       </form>
-    </div>
+    </section>
   );
 }
 
