@@ -14,25 +14,45 @@
 }
 
 #root {
-  background-image: linear-gradient(#424242, #111111);
+  --color-text: #89fc00;
+  --color-text-button: #f8f8f8;
+  --bg-color-main: linear-gradient(#424242, #111111);
+  --bg-color-nav: linear-gradient(#9492a4, #424141);
+  --bg-color-foot: linear-gradient(#0d0d0d, #73737a);
+  --bg-color-cart-component: linear-gradient(#618214, #1e2709);
+  --bg-color-button: linear-gradient(#89fc00, #026800);
+  --bg-color-input: linear-gradient(#9492a4, #545454);
+  --bg-color-dropdown: #545454;
+  --font-size-title-h1: 2rem;
+  --font-size-title-h2: 1.5rem;
+  --font-size-text: 1rem;
 }
 
-.cartBgGradient {
-  background: rgb(108, 141, 33);
-  background: rgb(30, 39, 9);
-  background: linear-gradient(
-    0deg,
-    rgba(30, 39, 9, 1) 80%,
-    rgba(108, 141, 33, 1) 97%
-  );
-}
-
-.styleMain {
+.bgColorMain {
+  background: var(--bg-color-main);
   background-size: cover;
+}
+
+.bgCartContainer {
+  background: var(--bg-color-cart-component);
+}
+
+.styleTitleH1 {
+  color: var(--color-text);
+  font-size: var(--font-size-title-h1);
+  font-family: "AppleGaramondBoldItalic";
+}
+.styleTitleH2 {
+  color: var(--color-text);
+  font-size: var(--font-size-title-h2);
+  font-family: "AppleGaramondBoldItalic";
+}
+.styleText {
+  color: var(--color-text);
+  font-size: var(--font-size-text);
+  font-family: "CaviarDreamsBoldItalic";
 }
 
 .noTextDecoration {
   text-decoration: none;
-  color: #03a400;
-  font-size: 1rem;
 }

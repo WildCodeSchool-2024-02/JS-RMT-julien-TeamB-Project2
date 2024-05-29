@@ -8,9 +8,9 @@ function Cart() {
   const { cart } = useCart();
 
   return (
-    <main>
+    <main className="bgColorMain">
       <Navigation />
-      <h1>Mon panier</h1>
+      <h1 className="styleTitleH1">Mon panier</h1>
       <section className="cartMainContainer">
         {cart.length === 0 ? (
           <p>Votre panier est vide.</p>

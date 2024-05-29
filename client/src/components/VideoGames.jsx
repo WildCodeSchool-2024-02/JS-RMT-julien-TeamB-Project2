@@ -24,7 +24,7 @@ function VideoGames({ genre }) {
   }, []);
 
   return (
-    <div>
+    <main>
       <h2>{genre}</h2>
       <ul className="videoGamesCardContainer">
         {gamesByGenre.slice(0, showCount).map((game) => (
@@ -36,7 +36,7 @@ function VideoGames({ genre }) {
           Afficher plus
         </button>
       )}
-    </div>
+    </main>
   );
 }
 
