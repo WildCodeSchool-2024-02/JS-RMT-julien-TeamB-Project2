@@ -9,11 +9,19 @@ const router = express.Router();
 /* ************************************************************************* */
 // Route to get a list of items
 router.get("/games", (req, res) => {
-  res.status(200).json(games);
+  if (req.query.genre) {
+    res
+      .status(200)
+      .json(games.filter((game) => game.genre === req.query.genre));
+  } else {
+    res.status(200).json(games);
+  }
 });
-router.get("/genre", (req, res) => {
-  res.status(200).json(games);
+
+router.get("/genres", (req, res) => {
+  res.status(200).json([...new Set(games.map((game) => game.genre))]);
 });
+
 router.get("/basket", (req, res) => {
   const game = games.slice(0, 6);
   res.status(200).json(game);

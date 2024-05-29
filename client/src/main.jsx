@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <Catalog />,
     loader: () =>
       axios
-        .get(`${import.meta.env.VITE_API_URL}/api/genre`)
+        .get(`${import.meta.env.VITE_API_URL}/api/genres`)
         .then((res) => res.data),
   },
   {
