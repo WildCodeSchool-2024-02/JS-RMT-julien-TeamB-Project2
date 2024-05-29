@@ -1,7 +1,11 @@
 import "./ArticleComponents.css";
 import "../App.css";
+import { useCart } from "../context/CartContext";
 
 function ArticleComponents({ game }) {
+
+  const { addToCart } = useCart();
+
   return (
     <section className="articleContainer">
       <img src={game.image} alt={game.title} />
