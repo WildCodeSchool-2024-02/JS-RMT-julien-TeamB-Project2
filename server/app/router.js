@@ -11,7 +11,9 @@ const router = express.Router();
 router.get("/games", (req, res) => {
   res.status(200).json(games);
 });
-
+router.get("/genre", (req, res) => {
+  res.status(200).json(games);
+});
 router.get("/basket", (req, res) => {
   const game = games.slice(0, 6);
   res.status(200).json(game);
