@@ -9,7 +9,7 @@ function Catalog() {
     <main className="bgColorMain">
       <Navigation />
       <div className="videoGamesPage">
-        <h1 className="videoGamesTitle">Catalogue</h1>
+        <h1 className="videoGamesTitle styleTitleH1">Catalogue</h1>
         {genres.map((genre) => (
           <VideoGames key={genre} genre={genre} />
         ))}
