@@ -27,11 +27,13 @@ function Navigation() {
             />
           </Link>
           <Link to="/">
-            <img
-              className="navLogoSize"
-              src={logoCategory}
-              alt="Logo catégorie"
-            />
+            <button type="button" onClick={() => setIsOpen(!isOpen)}>
+              <img
+                className="navLogoSize"
+                src={logoCategory}
+                alt="Logo catégorie"
+              />
+            </button>
           </Link>
           <Link to="/articles/:id">
             <img
@@ -40,9 +42,6 @@ function Navigation() {
               alt="Logo rechercher"
             />
           </Link>
-          <button type="button" onClick={() => setIsOpen(true)}>
-            Catégories
-          </button>
           <Link to="/panier">
             <img className="navLogoSize" src={logoCart} alt="Logo panier" />
           </Link>

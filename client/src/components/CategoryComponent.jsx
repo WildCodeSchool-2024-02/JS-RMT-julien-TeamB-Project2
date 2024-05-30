@@ -1,26 +1,29 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./CategoryComponent.css";
 import "../App.css";
 
 function Category() {
+  const [genres, setGenres] = useState([]);
+
+  const getGames = () => {
+    axios
+      .get(`${import.meta.env.VITE_API_URL}/api/genres`)
+      .then((res) => setGenres(res.data))
+      .catch((err) => console.error(err));
+  };
+
+  useEffect(() => {
+    getGames();
+  }, []);
+
   return (
     <section className="categoryMainContainer">
-      <h1>GENRES</h1>
+      <h2 className="styleTitleH2">GENRES</h2>
       <ul className="categoryContainer">
-        <li>Action RPG</li>
-        <li>Life Simulation</li>
-        <li>RPG</li>
-        <li>Action-Adventure</li>
-        <li>Fighting</li>
-        <li>MOBA</li>
-        <li>Sandbox</li>
-        <li>Battle Royale</li>
-        <li>Sports</li>
-        <li>Hero Shooter</li>
-        <li>Social Deduction</li>
-        <li>Platformer</li>
-        <li>First-Person Shooter</li>
-        <li>Tactical Shooter</li>
-        <li>MMO Shooter</li>
+        {genres.map((genre) => (
+          <li className="styleText" key={genre}>{genre}</li>
+        ))}
       </ul>
     </section>
   );
