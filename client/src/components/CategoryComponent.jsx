@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./CategoryComponent.css";
 import "../App.css";
@@ -25,6 +26,9 @@ function Category() {
           <li className="styleText" key={genre}>{genre}</li>
         ))}
       </ul>
+      <Link className="noTextDecoration styleText" to="/">
+        Toutes les catégories
+      </Link>
     </section>
   );
 }

@@ -26,15 +26,13 @@ function Navigation() {
               alt="Logo du site"
             />
           </Link>
-          <Link to="/">
-            <button type="button" onClick={() => setIsOpen(!isOpen)}>
+            <button className="bgColorMain" type="button" onClick={() => setIsOpen(!isOpen)}>
               <img
                 className="navLogoSize"
                 src={logoCategory}
                 alt="Logo catégorie"
               />
             </button>
-          </Link>
           <Link to="/articles/:id">
             <img
               className="navLogoSize"
