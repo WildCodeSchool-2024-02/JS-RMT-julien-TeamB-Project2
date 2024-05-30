@@ -43,6 +43,7 @@ function GameSearch() {
             placeholder="Search games "
           />
           <button type="submit">Search</button>
+          
         </form>
       )}
     </section>
