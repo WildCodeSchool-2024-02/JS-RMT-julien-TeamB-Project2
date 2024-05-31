@@ -4,6 +4,7 @@ import { useCart } from "../context/CartContext";
 function CartComponent({ id, title, image, price }) {
   const { removeFromCart } = useCart();
 
+  
   return (
     <section className="cartContainer bgCartContainer">
       <img className="cartImg" src={image} alt={title} />

@@ -1,14 +1,10 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
+import GameSearch from "./GameSearch";
 import logoGamingZone from "../assets/images/logoGamingZone.png";
-
 import Category from "./CategoryComponent";
-
 import logoCategory from "../assets/images/logoCategory.png";
-import logoSearch from "../assets/images/logoSearch.png";
 import logoCart from "../assets/images/logoCart.png";
-
 import "../App.css";
 import "./Navigation.css";
 
@@ -41,15 +37,7 @@ function Navigation() {
               />
             </button>
           </li>
-          <li>
-            <Link to="/articles/:id">
-              <img
-                className="navLogoSize"
-                src={logoSearch}
-                alt="Logo rechercher"
-              />
-            </Link>
-          </li>
+            <GameSearch  />
           <li>
             <Link to="/panier">
               <img
