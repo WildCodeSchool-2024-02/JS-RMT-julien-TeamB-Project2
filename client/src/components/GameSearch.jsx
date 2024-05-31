@@ -1,53 +1,79 @@
-import  { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 import logoSearch from "../assets/images/logoSearch.png";
+import "./GameSearch.css";
 
 function GameSearch() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [showInput, setShowInput] = useState(false);
-  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const [games, setGames] = useState([]);
+  const [searchVisible, setSearchVisible] = useState(false);
 
-  const handleButtonClick = () => {
-    setShowInput(true);
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
   };
 
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
+  useEffect(() => {
+    const getFilteredGames = async () => {
+      try {
+        if (query.length > 3) {
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/api/games?title=${query}`
+          );
+          setGames(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching games", error);
+      }
+    };
 
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    if (searchTerm) {
-      navigate(`/articles/${searchTerm}`);
+    if (query.length >= 3) {
+      getFilteredGames();
+    } else {
+      setGames([]);
     }
+  }, [query]);
+
+  const toggleSearchBar = () => {
+    setSearchVisible(!searchVisible);
   };
 
   return (
-    <section>
-      {!showInput ? (
-        <button onClick={handleButtonClick}type="button" >
-          <img
-            className="navLogoSize"
-            src={logoSearch}
-            alt="search" 
-            style={{ cursor: 'pointer' }}
-          />
-        </button>
-      ) : (
-        <form onSubmit={handleSearchSubmit}>
+    <div>
+      {searchVisible ? (
+        <div className="GameSearch-zone">
           <input
             type="text"
-            value={searchTerm}
-            onChange={handleSearchChange}
-            placeholder="Search games "
+            value={query}
+            onChange={handleInputChange}
+            placeholder="Search for a game"
           />
-          <button type="submit">Search</button>
-          
-        </form>
+          <ul className="gameSearch-dropdown">
+            {games.map((game) => (
+              <li className="gameDropDownList" key={game.id}>
+                <Link to={`/articles/${game.id}`}>{game.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <button
+          type="button"
+          onClick={toggleSearchBar}
+          style={{
+            background: "none",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
+          }}
+          aria-label="Toggle search bar"
+        >
+          <img className="navLogoSize" src={logoSearch} alt="Logo du site" />
+        </button>
       )}
-    </section>
+    </div>
   );
 }
 
-export default GameSearch
+export default GameSearch;
