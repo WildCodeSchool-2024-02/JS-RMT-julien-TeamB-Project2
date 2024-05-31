@@ -33,6 +33,12 @@
   background-size: cover;
 }
 
+.bgNavMain {
+  background: none;
+  background-size: cover;
+  border: none;
+}
+
 .bgCartContainer {
   background: var(--bg-color-cart-component);
 }

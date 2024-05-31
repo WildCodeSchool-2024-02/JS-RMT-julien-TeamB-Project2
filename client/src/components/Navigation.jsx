@@ -19,30 +19,46 @@ function Navigation() {
     <>
       <nav className="navContainer navBg">
         <ul className="navButtonContainer">
-          <Link to="/app">
-            <img
-              className="navLogoSize"
-              src={logoGamingZone}
-              alt="Logo du site"
-            />
-          </Link>
-            <button className="bgColorMain" type="button" onClick={() => setIsOpen(!isOpen)}>
+          <li>
+            <Link to="/app">
+              <img
+                className="navLogoSize"
+                src={logoGamingZone}
+                alt="Logo du site"
+              />
+            </Link>
+          </li>
+          <li>
+            <button
+              className="bgNavMain"
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               <img
                 className="navLogoSize"
                 src={logoCategory}
                 alt="Logo catégorie"
               />
             </button>
-          <Link to="/articles/:id">
-            <img
-              className="navLogoSize"
-              src={logoSearch}
-              alt="Logo rechercher"
-            />
-          </Link>
-          <Link to="/panier">
-            <img className="navLogoSize" src={logoCart} alt="Logo panier" />
-          </Link>
+          </li>
+          <li>
+            <Link to="/articles/:id">
+              <img
+                className="navLogoSize"
+                src={logoSearch}
+                alt="Logo rechercher"
+              />
+            </Link>
+          </li>
+          <li>
+            <Link to="/panier">
+              <img
+                className="navLogoSize"
+                src={logoCart}
+                alt="Logo panier"
+              />
+            </Link>
+          </li>
         </ul>
       </nav>
       {isOpen && <Category />}
