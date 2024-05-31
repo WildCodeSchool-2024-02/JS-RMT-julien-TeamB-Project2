@@ -28,17 +28,27 @@
 }
 
 .showMoreButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  font-family: Roboto, sans-serif;
+  font-weight: 0;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(90deg, #70e000 0%, #548a47 100%);
+  padding: 10px 30px;
+  border: solid #2ccc00 2px;
+  box-shadow: none;
+  border-radius: 0px 0px 25px 25px;
+  transition: 595ms;
+  transform: translateY(0);
   cursor: pointer;
 }
 
 .showMoreButton:hover {
-  background-color: #0056b3;
+  transition: 595ms;
+  padding: 10px 50px;
+  transform: translateY(-0px);
+  background: linear-gradient(90deg, #70e000 0%, #548a47 100%);
+  color: #ffffff;
+  border: solid 2px #2ccc00;
 }
 
 @media (max-width: 768px) {
