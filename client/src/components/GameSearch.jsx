@@ -42,7 +42,7 @@ function GameSearch() {
   return (
     <div>
       {searchVisible ? (
-        <div className="GameSearch-zone">
+        <div className="gameSearch-Zone">
           <input
             type="text"
             value={query}
