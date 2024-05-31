@@ -1,17 +1,10 @@
-import { Link } from "react-router-dom";
-
-import GameSearch from "./GameSearch";
-
 import { useState } from "react";
-
-
+import { Link } from "react-router-dom";
+import GameSearch from "./GameSearch";
 import logoGamingZone from "../assets/images/logoGamingZone.png";
-
 import Category from "./CategoryComponent";
-
 import logoCategory from "../assets/images/logoCategory.png";
 import logoCart from "../assets/images/logoCart.png";
-
 import "../App.css";
 import "./Navigation.css";
 
