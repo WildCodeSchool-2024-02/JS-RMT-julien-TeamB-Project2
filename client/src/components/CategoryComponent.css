@@ -25,3 +25,10 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .categoryContainer {
+    grid-template-columns: repeat(3, 1fr);
+    width: 40rem;
+  }
+}
