@@ -7,7 +7,7 @@ export const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
 // Fournisseur de contexte du panier
-export function CartProvider ({ children }) {
+export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   const addToCart = (game) => {
@@ -15,17 +15,19 @@ export function CartProvider ({ children }) {
   };
 
   const removeFromCart = (id) => {
-    setCart((prevCart) => prevCart.filter(item => item.id !== id));
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
   // Autres fonctions pour gérer le panier
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );
-};
-
-
-
+}

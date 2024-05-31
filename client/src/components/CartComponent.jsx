@@ -11,7 +11,14 @@ function CartComponent({ id, title, image, price }) {
       <div className="cartContent">
         <h2 className="styleTitleH2">{title}</h2>
         <p className="styleText">{price} EUR</p>
-        <button type="button" onClick = {() => {removeFromCart(id)}}>Retirer du panier</button>
+        <button
+          type="button"
+          onClick={() => {
+            removeFromCart(id);
+          }}
+        >
+          Retirer du panier
+        </button>
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ function GameCard({ game }) {
       </Link>
       <div className="gameCardBottom">
         <h2 className="styleTitleH2">{game.title}</h2>
-        <p className="styleText">{game.genre}</p>
+        <p className="styleText">{game.platforms}</p>
         <p className="styleText">{game.price}€</p>
       </div>
     </li>
