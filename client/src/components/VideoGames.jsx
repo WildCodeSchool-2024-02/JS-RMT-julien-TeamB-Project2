@@ -4,7 +4,7 @@ import axios from "axios";
 import GameCard from "./GameCard";
 import "./VideoGames.css";
 
-function VideoGames({ genre }) {
+function VideoGames({ genre, gameId }) {
   const [gamesByGenre, setGamesByGenre] = useState([]);
   const [showCount, setShowCount] = useState(4);
   const handleShowMore = () => {
@@ -27,9 +27,12 @@ function VideoGames({ genre }) {
     <main className="videoGamesPage">
       <h2 className="videoGamesTitleH2 styleTitleH2">{genre}</h2>
       <ul className="videoGamesCardContainer">
-        {gamesByGenre.slice(0, showCount).map((game) => (
-          <GameCard key={game.id} game={game} />
-        ))}
+        {gamesByGenre
+          .filter((game) => game.id !== gameId)
+          .slice(0, showCount)
+          .map((game) => (
+            <GameCard key={game.id} game={game} />
+          ))}
       </ul>
       {gamesByGenre.length > showCount && (
         <button
