@@ -6,9 +6,9 @@ import "./VideoGames.css";
 
 function VideoGames({ genre }) {
   const [gamesByGenre, setGamesByGenre] = useState([]);
-  const [showCount, setShowCount] = useState(3);
+  const [showCount, setShowCount] = useState(4);
   const handleShowMore = () => {
-    setShowCount(showCount + 3);
+    setShowCount(showCount + 4);
   };
 
   const getGames = () => {
@@ -25,14 +25,18 @@ function VideoGames({ genre }) {
 
   return (
     <main className="videoGamesPage">
-      <h2 className="videoGamesTitleH2 styleTitleH2">{genre} :</h2>
+      <h2 className="videoGamesTitleH2 styleTitleH2">{genre}</h2>
       <ul className="videoGamesCardContainer">
         {gamesByGenre.slice(0, showCount).map((game) => (
           <GameCard key={game.id} game={game} />
         ))}
       </ul>
       {gamesByGenre.length > showCount && (
-        <button className="showMoreButton" type="button" onClick={handleShowMore}>
+        <button
+          className="showMoreButton"
+          type="button"
+          onClick={handleShowMore}
+        >
           Afficher plus
         </button>
       )}
