@@ -1,9 +1,12 @@
 .gameCardImg {
   width: 100%;
-  max-width: 400px;
+  max-width: 24rem;
+  min-width: 24rem;
   object-fit: cover;
   border-radius: 8px;
-  max-height: 10rem;
+  max-height: 28rem;
+  min-height: 28rem;
+  background-size: contain;
 }
 
 @media (max-width: 768px) {
