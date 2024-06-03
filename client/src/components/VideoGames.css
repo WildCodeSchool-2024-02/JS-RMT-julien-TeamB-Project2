@@ -64,6 +64,7 @@
 @media (max-width: 768px) {
   .videoGamesCardContainer {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
   .gameCardBottom {
     text-align: center;
@@ -74,15 +75,21 @@
     max-height: 24rem;
     min-height: 24rem;
   }
+  .videoGamesTitleH2 {
+    margin: 0 0 0rem 1rem;
+  }
+  .videoGamesCardContainer li {
+    margin: 0rem;
+  }
 }
 
 .showMoreButton {
   font-family: Roboto, sans-serif;
   font-weight: 0;
-  font-size: 14px;
+  font-size: 1rem;
   color: #fff;
   background: linear-gradient(90deg, #70e000 0%, #548a47 100%);
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem;
   border: solid #2ccc00 2px;
   box-shadow: none;
   border-radius: 0px 0px 25px 25px;
@@ -93,7 +100,7 @@
 
 .showMoreButton:hover {
   transition: 595ms;
-  padding: 10px 50px;
+  padding: 0.625rem 3.125rem;
   transform: translateY(-0px);
   background: linear-gradient(90deg, #70e000 0%, #548a47 100%);
   color: #ffffff;
