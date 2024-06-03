@@ -25,7 +25,56 @@
   gap: 30px;
   list-style: none;
   padding: 0;
-  margin: 20px auto;
+  margin: 30px auto;
+}
+
+.videoGamesCardContainer li {
+  background-color: dimgray;
+  border-radius: 8px;
+  margin: 10px;
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.videoGamesCardContainer li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.gameCardImg {
+  width: 100%;
+  min-width: 24rem;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  max-height: 28rem;
+  min-height: 28rem;
+  background-size: contain;
+}
+
+.gameCardBottom {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .videoGamesCardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gameCardBottom {
+    text-align: center;
+  }
+  .gameCardImg {
+    max-width: 20rem;
+    min-width: 20rem;
+    max-height: 24rem;
+    min-height: 24rem;
+  }
 }
 
 .showMoreButton {
@@ -50,10 +99,4 @@
   background: linear-gradient(90deg, #70e000 0%, #548a47 100%);
   color: #ffffff;
   border: solid 2px #2ccc00;
-}
-
-@media (max-width: 768px) {
-  .videoGamesCardContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
