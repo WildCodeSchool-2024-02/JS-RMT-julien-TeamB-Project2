@@ -7,7 +7,9 @@ import "../App.css";
 
 function Cart() {
   const { cart, clearCart } = useCart();
-  const total = cart.reduce((acc, game) => acc + game.price, 0);
+  const total = cart
+    .reduce((acc, game) => acc + game.price * game.quantity, 0)
+    .toFixed(2);
 
   return (
     <main className="bgColorMain">
@@ -20,15 +22,7 @@ function Cart() {
         {cart.length === 0 ? (
           <p>Votre panier est vide.</p>
         ) : (
-          cart.map((game) => (
-            <CartComponent
-              key={game.id}
-              id={game.id}
-              title={game.title}
-              image={game.image}
-              price={game.price}
-            />
-          ))
+          cart.map((game) => <CartComponent key={game.id} game={game} />)
         )}
         <h3>Total: {total} €</h3>
       </section>
