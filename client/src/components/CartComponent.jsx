@@ -12,7 +12,7 @@ function CartComponent({ id, title, image, price }) {
       <img className="cartImg" src={image} alt={title} />
         <h2 className="styleTitleH2">{title}</h2>
         <p className="styleText">{price} EUR</p>
-        <button className="buttonRetirerDuPanier"
+        <button 
           type="button"
           onClick={() => {
             removeFromCart(id);

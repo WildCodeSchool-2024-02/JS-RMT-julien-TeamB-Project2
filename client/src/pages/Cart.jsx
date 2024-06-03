@@ -12,9 +12,9 @@ function Cart() {
   return (
     <main className="bgColorMain">
       <Navigation />
-      <div className="buttonTitleCart">
+      <div className="cartTitleButton">
       <h1 className="styleTitleH1">Mon panier</h1>
-      <button className="buttonViderPanier" type="button" onClick={clearCart}>
+      <button className="cartBinButton" type="button" onClick={clearCart}>
         Vider le panier
       </button>
       </div>
