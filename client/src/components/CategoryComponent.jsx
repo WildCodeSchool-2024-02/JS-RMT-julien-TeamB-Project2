@@ -23,7 +23,14 @@ function Category() {
       <h2 className="styleTitleH2">GENRES</h2>
       <ul className="categoryContainer">
         {genres.map((genre) => (
-          <li className="styleText" key={genre}>{genre}</li>
+          <li className="styleText" key={genre}>
+            <Link
+              to={`/games?genre=${genre}`}
+              className="noTextDecoration styleText"
+            >
+              {genre}
+            </Link>
+          </li>
         ))}
       </ul>
       <Link className="noTextDecoration styleText" to="/">

@@ -7,6 +7,7 @@ import "./VideoGames.css";
 function VideoGames({ genre, gameId }) {
   const [gamesByGenre, setGamesByGenre] = useState([]);
   const [showCount, setShowCount] = useState(4);
+
   const handleShowMore = () => {
     setShowCount(showCount + 4);
   };
