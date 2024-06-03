@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--color-text);
+  h3 {
+    margin: 2rem;
+  }
 }
 
 .cartContainer {
@@ -11,11 +15,12 @@
   width: 60%;
   height: 8rem;
   border: solid 1px rgb(48, 47, 47);
-  margin: 1rem 0.5rem;
+  margin: 1.5rem;
   border-radius: 2rem;
+  padding: 1rem;
   .cartImg {
-    height: 100px;
-    width: 100px;
+    height: 6.2rem;
+    width: 6.2rem;
     margin: 2rem;
     border-radius: 1rem;
     object-fit: cover;
@@ -25,32 +30,72 @@
   }
 }
 
-.cartContent {
+.buttonTitleCart {
   display: flex;
-  padding: 7rem;
-  gap: 8rem;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.buttonViderPanier {
+  background-image: var(--bg-color-button);
+  border: 1px solid var(--color-text);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  line-height: 1.47059;
+  min-width: 30px;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.buttonViderPanier:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.buttonViderPanier:hover {
+  background: var(--bg-color-hover);
+  border-color: var(--color-text);
+  text-decoration: none;
+}
+
+.buttonViderPanier:active {
+  background-image: var(--color-text);
+  border-color: var(--color-text);
+  outline: none;
+}
+
+.buttonViderPanier:focus {
+  background-image: var(--color-text);
+  outline: none;
 }
 
 @media (max-width: 768px) {
   .cartContainer {
-    width: 60%;
-    height: 8rem;
-    margin: 1rem 0.5rem;
-    border-radius: 2rem;
-    .cartImg {
-      height: 86px;
-      width: 60px;
-      margin: 2rem;
-      border-radius: 1rem;
-      object-fit: cover;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    h2 {
+      font-size: 1rem;
     }
   }
 
   .cartContent {
     display: flex;
     padding: 0rem;
-    gap: 0rem;
-    justify-content: space-around;
+    gap: 1rem;
   }
 }
