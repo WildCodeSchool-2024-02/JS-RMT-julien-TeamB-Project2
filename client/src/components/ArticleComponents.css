@@ -26,7 +26,7 @@
   .articleButton {
     font-family: "AppleGaramondBoldItalic";
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: var(--font-size-text);
     color: var(--color-text-button);
     background: var(--bg-color-button);
     padding: 0.625rem 1.875rem;
