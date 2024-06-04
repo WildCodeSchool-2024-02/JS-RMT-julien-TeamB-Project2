@@ -19,6 +19,7 @@ function Cart() {
         <button className="cartBinButton" type="button" onClick={clearCart}>
           Vider le panier
         </button>
+
       </div>
       <section className="cartMainContainer">
         {cart.length === 0 ? (

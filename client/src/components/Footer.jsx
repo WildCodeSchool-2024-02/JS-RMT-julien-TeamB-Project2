@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import SubscriptionForm from "./SubscriptionForm";
+import NewsLetter from "./NewsLetter";
 import Social from "./Social";
-
 import facebookImg from "../assets/images/facebook.png";
 import instagramImg from "../assets/images/instagram.png";
 import youtubeImg from "../assets/images/youtube.png";
 import logoGamingZone from "../assets/images/logoGamingZone.png";
 import linkedinImg from "../assets/images/linkedin.png";
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -38,7 +38,7 @@ function Footer() {
           />
         </Link>
       </section>
-      <SubscriptionForm />
+      <NewsLetter />
     </footer>
   );
 }
