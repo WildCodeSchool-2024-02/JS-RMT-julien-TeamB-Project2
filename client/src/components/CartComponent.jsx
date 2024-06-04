@@ -25,7 +25,6 @@ function CartComponent({ id, title, image, price }) {
         >
           <img src={addGameIcon} alt="Retirer du panier" />
         </button>
-      
     </section>
   );
 }
