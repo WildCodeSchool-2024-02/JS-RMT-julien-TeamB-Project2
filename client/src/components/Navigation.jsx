@@ -1,19 +1,22 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import logoGamingZone from "../assets/images/logoGamingZone.png";
-
 import Category from "./CategoryComponent";
-
 import logoCategory from "../assets/images/logoCategory.png";
-import logoSearch from "../assets/images/logoSearch.png";
 import logoCart from "../assets/images/logoCart.png";
-
 import "../App.css";
 import "./Navigation.css";
 
 function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
     <>
@@ -32,7 +35,7 @@ function Navigation() {
             <button
               className="bgNavMain"
               type="button"
-              onClick={() => setIsOpen(!isOpen)}
+              onMouseEnter={handleMouseEnter}
             >
               <img
                 className="navLogoSize"
@@ -40,15 +43,6 @@ function Navigation() {
                 alt="Logo catégorie"
               />
             </button>
-          </li>
-          <li>
-            <Link to="/articles/:id">
-              <img
-                className="navLogoSize"
-                src={logoSearch}
-                alt="Logo rechercher"
-              />
-            </Link>
           </li>
           <li>
             <Link to="/panier">
@@ -61,7 +55,15 @@ function Navigation() {
           </li>
         </ul>
       </nav>
-      {isOpen && <Category />}
+      {isHovered && (
+        <div
+          className="categoryContainer" // Assurez-vous de bien positionner ce conteneur avec du CSS
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Category />
+        </div>
+      )}
     </>
   );
 }
