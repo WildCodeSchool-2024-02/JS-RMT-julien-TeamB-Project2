@@ -18,6 +18,10 @@ function Navigation() {
     setIsHovered(false);
   };
 
+  const handleCloseCategory = () => {
+    setIsHovered(false);
+  };
+
   return (
     <>
       <nav className="navContainer navBg">
@@ -47,11 +51,7 @@ function Navigation() {
           </li>
           <li>
             <Link to="/panier">
-              <img
-                className="navLogoSize"
-                src={logoCart}
-                alt="Logo panier"
-              />
+              <img className="navLogoSize" src={logoCart} alt="Logo panier" />
             </Link>
           </li>
         </ul>
@@ -62,7 +62,7 @@ function Navigation() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Category />
+          <Category close={handleCloseCategory} />
         </div>
       )}
     </>

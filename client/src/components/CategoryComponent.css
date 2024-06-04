@@ -37,6 +37,10 @@
   transition: color 0.3s;
 }
 
+.categoryContainer li:hover {
+  transform: scale(1.1);
+}
+
 .categoryContainer li a:hover {
   color: var(--color-text-button);
 }
@@ -49,6 +53,18 @@
 
 .allLink:hover {
   color: var(--color-text-button);
+  transform: scale(1.1);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
 }
 
 @media (max-width: 768px) {
