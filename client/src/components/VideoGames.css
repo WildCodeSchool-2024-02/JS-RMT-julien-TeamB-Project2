@@ -1,5 +1,5 @@
 .videoGamesPage {
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -22,19 +22,34 @@
 .videoGamesCardContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 2rem;
   list-style: none;
   padding: 0;
-  margin: 20px auto;
+  margin: 2rem auto;
+}
+
+.videoGamesCardContainer li {
+  border-radius: 8px;
+  margin: 1rem;
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.videoGamesCardContainer li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .showMoreButton {
   font-family: Roboto, sans-serif;
   font-weight: 0;
-  font-size: 14px;
+  font-size: 1rem;
   color: #fff;
   background: linear-gradient(90deg, #70e000 0%, #548a47 100%);
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem;
   border: solid #2ccc00 2px;
   box-shadow: none;
   border-radius: 0px 0px 25px 25px;
@@ -45,15 +60,22 @@
 
 .showMoreButton:hover {
   transition: 595ms;
-  padding: 10px 50px;
+  padding: 0.625rem 3.125rem;
   transform: translateY(-0px);
   background: linear-gradient(90deg, #70e000 0%, #548a47 100%);
-  color: #ffffff;
+  color: var(--color-text-button);
   border: solid 2px #2ccc00;
 }
 
 @media (max-width: 768px) {
   .videoGamesCardContainer {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .videoGamesTitleH2 {
+    margin: 0 0 0rem 1rem;
+  }
+  .videoGamesCardContainer li {
+    margin: 0rem;
   }
 }

@@ -1,9 +1,11 @@
 .gameCardImg {
   width: 100%;
-  max-width: 24rem;
   min-width: 24rem;
   object-fit: cover;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   max-height: 28rem;
   min-height: 28rem;
   background-size: contain;
