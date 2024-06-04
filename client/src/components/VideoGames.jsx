@@ -4,7 +4,7 @@ import axios from "axios";
 import GameCard from "./GameCard";
 import "./VideoGames.css";
 
-function VideoGames({ genre, gameId }) {
+function VideoGames({ genre, gameId, cls }) {
   const [gamesByGenre, setGamesByGenre] = useState([]);
   const [showCount, setShowCount] = useState(4);
   const handleShowMore = () => {
@@ -31,7 +31,7 @@ function VideoGames({ genre, gameId }) {
           .filter((game) => game.id !== gameId)
           .slice(0, showCount)
           .map((game) => (
-            <GameCard key={game.id} game={game} />
+            <GameCard key={game.id} game={game} cls={cls} />
           ))}
       </ul>
       {gamesByGenre.length > showCount && (
