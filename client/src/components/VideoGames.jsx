@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+
 import GameCard from "./GameCard";
 import "./VideoGames.css";
 
-function VideoGames({ genre, gameId, cls }) {
+function VideoGames({ genre, gameId }) {
   const [gamesByGenre, setGamesByGenre] = useState([]);
   const [showCount, setShowCount] = useState(4);
   const handleShowMore = () => {
@@ -30,7 +31,7 @@ function VideoGames({ genre, gameId, cls }) {
           .filter((game) => game.id !== gameId)
           .slice(0, showCount)
           .map((game) => (
-            <GameCard key={game.id} game={game} cls={cls} />
+            <GameCard key={game.id} game={game} />
           ))}
       </ul>
       {gamesByGenre.length > showCount && (
