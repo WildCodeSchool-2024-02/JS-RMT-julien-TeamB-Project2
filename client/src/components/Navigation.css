@@ -18,3 +18,11 @@
 .navLogoSize {
   max-width: 5rem;
 }
+
+.navLogoSize:hover {
+  transform: scale(1.1);
+}
+
+.burgerButton {
+  cursor: pointer;
+}
