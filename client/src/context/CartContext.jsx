@@ -11,11 +11,36 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   const addToCart = (game) => {
-    setCart((prevCart) => [...prevCart, game]);
+    setCart((prevCart) => [...prevCart, { ...game, quantity: 1 }]);
   };
 
   const removeFromCart = (id) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+  };
+
+  const isInCart = (game) => cart.some((item) => item.id === game.id);
+
+  const handleGameInCart = (game) => {
+    if (isInCart(game)) {
+      removeFromCart(game.id);
+    } else {
+      addToCart(game);
+    }
+  };
+
+  const updateQuantity = (event, game) => {
+    if (+event.target.value <= 0) {
+      removeFromCart(game.id);
+    } else {
+      setCart((prev) =>
+        prev.map((item) => {
+          if (item.id === game.id) {
+            return { ...game, quantity: +event.target.value };
+          }
+          return item;
+        })
+      );
+    }
   };
 
   const clearCart = () => {
@@ -25,7 +50,7 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart }}
+      value={{ cart, handleGameInCart, clearCart, isInCart, updateQuantity }}
     >
       {children}
     </CartContext.Provider>

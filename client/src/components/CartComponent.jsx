@@ -6,7 +6,6 @@ import addGameIcon from "../assets/images/addGameIcon.png";
 function CartComponent({ id, title, image, price }) {
   const { removeFromCart } = useCart();
 
-  
   return (
     <section className="cartContainer bgCartContainer">
       <img className="cartImg" src={image} alt={title} />
@@ -26,7 +25,6 @@ function CartComponent({ id, title, image, price }) {
         >
           <img src={addGameIcon} alt="Retirer du panier" />
         </button>
-      
     </section>
   );
 }
