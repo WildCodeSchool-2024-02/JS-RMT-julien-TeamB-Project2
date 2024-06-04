@@ -52,8 +52,10 @@
 }
 
 @media (max-width: 768px) {
+  .categoryMainContainer {
+    width: 70%;
+  }
   .categoryContainer {
-    grid-template-columns: repeat(3, 1fr);
-    width: 40rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
