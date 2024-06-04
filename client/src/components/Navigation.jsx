@@ -36,6 +36,7 @@ function Navigation() {
               className="bgNavMain"
               type="button"
               onMouseEnter={handleMouseEnter}
+              onClick={handleMouseEnter}
             >
               <img
                 className="navLogoSize"
