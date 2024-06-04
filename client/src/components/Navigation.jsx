@@ -9,7 +9,19 @@ import "../App.css";
 import "./Navigation.css";
 
 function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleCloseCategory = () => {
+    setIsHovered(false);
+  };
 
   return (
     <>
@@ -28,7 +40,8 @@ function Navigation() {
             <button
               className="bgNavMain burgerButton"
               type="button"
-              onClick={() => setIsOpen(!isOpen)}
+              onMouseEnter={handleMouseEnter}
+              onClick={handleMouseEnter}
             >
               <img
                 className="navLogoSize"
@@ -40,16 +53,20 @@ function Navigation() {
             <GameSearch  />
           <li>
             <Link to="/panier">
-              <img
-                className="navLogoSize"
-                src={logoCart}
-                alt="Logo panier"
-              />
+              <img className="navLogoSize" src={logoCart} alt="Logo panier" />
             </Link>
           </li>
         </ul>
       </nav>
-      {isOpen && <Category />}
+      {isHovered && (
+        <div
+          className="categoryContainer"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Category close={handleCloseCategory} />
+        </div>
+      )}
     </>
   );
 }

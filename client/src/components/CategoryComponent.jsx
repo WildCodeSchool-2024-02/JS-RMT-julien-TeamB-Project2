@@ -4,7 +4,7 @@ import axios from "axios";
 import "./CategoryComponent.css";
 import "../App.css";
 
-function Category() {
+function Category({ close }) {
   const [genres, setGenres] = useState([]);
 
   const getGames = () => {
@@ -20,13 +20,23 @@ function Category() {
 
   return (
     <section className="categoryMainContainer">
+      <button type="button" className="closeButton" onClick={close}>
+        ✖
+      </button>
       <h2 className="styleTitleH2">GENRES</h2>
       <ul className="categoryContainer">
         {genres.map((genre) => (
-          <li className="styleText" key={genre}>{genre}</li>
+          <li className="styleText" key={genre}>
+            <Link
+              to={`/?genre=${genre}`}
+              className="noTextDecoration styleText"
+            >
+              {genre}
+            </Link>
+          </li>
         ))}
       </ul>
-      <Link className="noTextDecoration styleText" to="/">
+      <Link className="noTextDecoration styleText allLink" to="/">
         Toutes les catégories
       </Link>
     </section>
