@@ -1,9 +1,10 @@
 import { useCart } from "../context/CartContext";
 import CartButton from "./Button/CartButton";
 import "./CartComponent.css";
+import addGameIcon from "../assets/images/addGameIcon.png";
 
 function CartComponent({ game }) {
-  const { updateQuantity } = useCart();
+  const { updateQuantity, removeFromCart } = useCart();
   return (
     <section className="cartContainer bgCartContainer">
       <img className="cartImg" src={game.image} alt={game.title} />
