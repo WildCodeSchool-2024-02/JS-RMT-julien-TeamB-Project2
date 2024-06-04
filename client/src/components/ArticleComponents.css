@@ -74,10 +74,4 @@
   .videoGamesCardContainer {
     grid-template-columns: repeat(2, 1fr);
   }
-  .gameCardImg.article {
-    max-width: 10rem;
-    min-width: 10rem;
-    max-height: 10rem;
-    min-height: 10rem;
-  }
 }
