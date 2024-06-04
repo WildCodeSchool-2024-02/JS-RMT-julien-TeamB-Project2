@@ -1,0 +1,52 @@
+.gameSearch-dropdown {
+  a {
+    color: var(--color-text);
+    list-style-type: none;
+    text-decoration: none;
+  }
+}
+
+input[placeholder="Search for a game"] {
+  color: var(--bg-color-dropdown);
+}
+
+.gameSearch-Zone {
+  position: relative;
+
+  input {
+    background-color: var(--color-text);
+    border-radius: 50rem;
+    padding: 0.5rem;
+  }
+  input[type="text"] {
+    color: var(--bg-color-dropdown);
+  }
+}
+
+.gameDropDownList {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.gameSearch-dropdown {
+  background-color: #454040db;
+  border-radius: 0.5rem;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .gameSearch-Zone {
+    width: calc(100% - 20px);
+  }
+  .gameDropDownList {
+    padding: 0.5rem;
+  }
+  input[type="text"] {
+    font-size: 0.7rem;
+  }
+  .gameSearch-dropdown {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}

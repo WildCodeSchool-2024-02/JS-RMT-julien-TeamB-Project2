@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import GameSearch from "./GameSearch";
 import logoGamingZone from "../assets/images/logoGamingZone.png";
 import Category from "./CategoryComponent";
 import logoCategory from "../assets/images/logoCategory.png";
@@ -49,6 +50,7 @@ function Navigation() {
               />
             </button>
           </li>
+            <GameSearch  />
           <li>
             <Link to="/panier">
               <img className="navLogoSize" src={logoCart} alt="Logo panier" />

@@ -4,6 +4,8 @@ const games = require("../database/data");
 
 const router = express.Router();
 
+const client = require("../database/client");
+
 /* ************************************************************************* */
 // Define Your API Routes Here
 /* ************************************************************************* */
@@ -13,13 +15,23 @@ router.get("/games", (req, res) => {
     res
       .status(200)
       .json(games.filter((game) => game.genre === req.query.genre));
+  } else if (req.query.title) {
+    const { title } = req.query;
+    const flGames = games.filter((g) =>
+      g.title.toLowerCase().includes(title.toLowerCase())
+    );
+    res.status(200).json(flGames);
   } else {
     res.status(200).json(games);
   }
 });
 
 router.get("/genres", (req, res) => {
-  res.status(200).json([...new Set(games.map((game) => game.genre))]);
+  client
+    .query("SELECT DISTINCT genre FROM games")
+    .then((genres) =>
+      res.status(200).json(genres[0].map((game) => game.genre))
+    );
 });
 
 router.get("/basket", (req, res) => {
