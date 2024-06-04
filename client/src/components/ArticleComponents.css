@@ -41,11 +41,6 @@
     cursor: pointer;
     text-transform: lowercase;
   }
-  .gameCardImg.article {
-    max-height: 15rem;
-    min-height: 15rem;
-  }
-
   .articleButton:hover {
     transition: 349ms;
     padding: 0.625rem 1.125rem;
