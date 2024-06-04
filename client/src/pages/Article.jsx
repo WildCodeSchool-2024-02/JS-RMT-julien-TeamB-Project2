@@ -3,7 +3,6 @@ import ArticleComponents from "../components/ArticleComponents";
 import VideoGames from "../components/VideoGames";
 import Footer from "../components/Footer";
 import "../App.css";
-
 import Navigation from "../components/Navigation";
 
 function Article() {
@@ -13,7 +12,12 @@ function Article() {
     <main className="bgColorMain">
       <Navigation />
       <ArticleComponents game={game} />
-      <VideoGames game={game} genre={game.genre} gameId={game.id} />
+      <VideoGames
+        game={game}
+        genre={game.genre}
+        gameId={game.id}
+        cls="article"
+      />
       <Footer />
     </main>
   );

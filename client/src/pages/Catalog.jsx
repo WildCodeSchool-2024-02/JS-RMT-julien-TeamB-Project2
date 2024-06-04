@@ -12,7 +12,7 @@ function Catalog() {
       <div className="videoGamesPage">
         <h1 className="videoGamesTitleH1 styleTitleH1">Catalogue</h1>
         {genres.map((genre) => (
-          <VideoGames key={genre} genre={genre} />
+          <VideoGames key={genre} genre={genre} cls="home" />
         ))}
       </div>
       <Footer />
