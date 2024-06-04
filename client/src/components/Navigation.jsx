@@ -57,7 +57,7 @@ function Navigation() {
       </nav>
       {isHovered && (
         <div
-          className="categoryContainer" // Assurez-vous de bien positionner ce conteneur avec du CSS
+          className="categoryContainer"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
