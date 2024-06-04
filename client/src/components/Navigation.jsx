@@ -38,7 +38,7 @@ function Navigation() {
           </li>
           <li>
             <button
-              className="bgNavMain"
+              className="bgNavMain burgerButton"
               type="button"
               onMouseEnter={handleMouseEnter}
               onClick={handleMouseEnter}

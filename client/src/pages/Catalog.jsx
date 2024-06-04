@@ -19,7 +19,7 @@ function Catalog() {
               searchParams.get("genre") === null
           )
           .map((genre) => (
-            <VideoGames key={genre} genre={genre} />
+            <VideoGames key={genre} genre={genre} cls="home" />
           ))}
       </div>
       <Footer />
