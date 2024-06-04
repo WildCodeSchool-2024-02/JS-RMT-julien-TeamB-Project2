@@ -27,9 +27,20 @@ function CartComponent({ game }) {
           </select>
         </label>
         <CartButton game={game} />
+          <button 
+          type="button"
+          onClick={() => {
+            removeFromCart(id);
+          }}
+          style={{
+            background: "none",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
+          }}
+        >
+          <img src={addGameIcon} alt="Retirer du panier" />
+        </button>
       </div>
-    </section>
-  );
-}
 
 export default CartComponent;

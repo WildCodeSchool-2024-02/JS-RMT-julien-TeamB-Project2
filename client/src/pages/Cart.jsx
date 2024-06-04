@@ -14,10 +14,12 @@ function Cart() {
   return (
     <main className="bgColorMain">
       <Navigation />
+      <div className="cartTitleButton">
       <h1 className="styleTitleH1">Mon panier</h1>
-      <button type="button" onClick={clearCart}>
+      <button className="cartBinButton" type="button" onClick={clearCart}>
         Vider le panier
       </button>
+      </div>
       <section className="cartMainContainer">
         {cart.length === 0 ? (
           <p>Votre panier est vide.</p>
