@@ -63,8 +63,8 @@
   font-size: 1.5rem;
   cursor: pointer;
   position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
+  top: 0.4rem;
+  right: 1rem;
 }
 
 @media (max-width: 768px) {
