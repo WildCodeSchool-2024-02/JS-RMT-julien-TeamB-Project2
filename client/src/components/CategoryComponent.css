@@ -70,6 +70,12 @@
 @media (max-width: 768px) {
   .categoryMainContainer {
     width: 70%;
+    background: #545454f5;
+    position: fixed;
+    padding: 0.625rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 15rem;
   }
   .categoryContainer {
     grid-template-columns: repeat(2, 1fr);
