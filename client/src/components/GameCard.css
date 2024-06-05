@@ -29,6 +29,11 @@
   .gameCardBottom {
     text-align: center;
   }
+
+  .gameCardImg {
+    max-width: 22rem;
+    min-width: 22rem;
+  }
   .gameCardImg.article {
     max-width: 10rem;
     min-width: 10rem;
