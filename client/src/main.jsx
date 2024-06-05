@@ -10,6 +10,7 @@ import App from "./App";
 import Catalog from "./pages/Catalog";
 import Article from "./pages/Article";
 import Cart from "./pages/Cart";
+import FormComments from "./components/FormComments";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       );
       return res.data;
     },
+  },
+  {
+    path: "/commentaire",
+    element: <FormComments />,
   },
   {
     path: "/panier",
