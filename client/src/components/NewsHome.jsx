@@ -9,7 +9,7 @@ function NewsCard() {
     const fetchData = () => {
       axios
         .get(
-          "https://newsapi.org/v2/everything/?q=gaming&language=fr&apiKey=a957ae1f88df4d6885bd3de972fb6ebf"
+          `https://newsapi.org/v2/everything/?q=gaming&language=fr&apiKey=${import.meta.env.VITE_API_NEWS_KEY}`
         )
         .then((response) => {
           const allArticles = response.data.articles;
@@ -30,7 +30,7 @@ function NewsCard() {
             <a href={article.url} key={article.url} className="newsLink">
               <div className="newsItem">
                 <h3>{article.title}</h3>
-                <img src={article.urlToImage} alt="PhotoDeL'Article" />
+                <img src={article.urlToImage} alt={article.title} />
                 <p>{article.description.substring(0, 200)}...</p>
                 <p>{new Date(article.publishedAt).toLocaleDateString()}</p>
                 <p>{article.author}</p>
