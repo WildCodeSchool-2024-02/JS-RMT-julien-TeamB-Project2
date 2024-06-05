@@ -8,7 +8,7 @@
   width: 50%;
   padding: 2rem;
   text-align: center;
-  margin-top: 20rem;
+  margin-top: -4rem;
 }
 
 .categoryMainContainer h2 {
@@ -72,9 +72,10 @@
     width: 70%;
     background: #545454f5;
     position: fixed;
-    padding: 10px;
+    padding: 0.625rem;
     border: none;
     cursor: pointer;
+    margin-top: 15rem;
   }
   .categoryContainer {
     grid-template-columns: repeat(2, 1fr);

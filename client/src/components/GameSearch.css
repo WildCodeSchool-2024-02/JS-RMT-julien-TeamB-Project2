@@ -33,11 +33,12 @@ input[placeholder="Search for a game"] {
   background-color: #454040db;
   border-radius: 0.5rem;
   position: absolute;
+  z-index: 1000;
 }
 
 @media (max-width: 768px) {
   .gameSearch-Zone {
-    width: calc(100% - 20px);
+    width: calc(100% - 1.25rem);
   }
   .gameDropDownList {
     padding: 0.5rem;
