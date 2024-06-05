@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 
 // Création du contexte du panier
 export const CartContext = createContext();
@@ -10,12 +10,32 @@ export const useCart = () => useContext(CartContext);
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
+  // Fonction pour sauvegarder le panier dans le localStorage
+  const saveCartToLocalStorage = (newCart) => {
+    localStorage.setItem("cart", JSON.stringify(newCart));
+  };
+
+  // Chargement du panier depuis le localStorage lors du montage du composant
+  useEffect(() => {
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+      setCart(JSON.parse(savedCart));
+    }
+  }, []);
+
+  // Fonction pour mettre à jour le panier et sauvegarder dans le localStorage
+  const updateCart = (newCart) => {
+    setCart(newCart);
+    saveCartToLocalStorage(newCart);
+  };
+
+    // Autres fonctions pour gérer le panier
   const addToCart = (game) => {
-    setCart((prevCart) => [...prevCart, { ...game, quantity: 1 }]);
+    updateCart([...cart, { ...game, quantity: 1 }]);
   };
 
   const removeFromCart = (id) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    updateCart(cart.filter((item) => item.id !== id));
   };
 
   const isInCart = (game) => cart.some((item) => item.id === game.id);
@@ -32,8 +52,8 @@ export function CartProvider({ children }) {
     if (+event.target.value <= 0) {
       removeFromCart(game.id);
     } else {
-      setCart((prev) =>
-        prev.map((item) => {
+      updateCart(
+        cart.map((item) => {
           if (item.id === game.id) {
             return { ...game, quantity: +event.target.value };
           }
@@ -44,9 +64,8 @@ export function CartProvider({ children }) {
   };
 
   const clearCart = () => {
-    setCart([]);
+    updateCart([]);
   };
-  // Autres fonctions pour gérer le panier
 
   return (
     <CartContext.Provider
