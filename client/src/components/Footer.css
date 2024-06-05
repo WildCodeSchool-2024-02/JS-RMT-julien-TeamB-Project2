@@ -11,7 +11,7 @@
 }
 
 .iconSocial a:hover img {
-  transform: scale(1.1);
+  transform: var(--logo-transform);
 }
 
 .logoFooter {

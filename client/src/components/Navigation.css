@@ -20,7 +20,7 @@
 }
 
 .navLogoSize:hover {
-  transform: scale(1.1);
+  transform: var(--logo-transform);
 }
 
 .burgerButton {
