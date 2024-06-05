@@ -33,6 +33,12 @@ function Navigation() {
     setIsHovered(false);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      setIsHovered(!isHovered);
+    }
+  };
+
   return (
     <>
       <nav className="navContainer navBg">
@@ -52,6 +58,7 @@ function Navigation() {
               type="button"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              onKeyDown={handleKeyDown}
             >
               <img
                 className="navLogoSize"
