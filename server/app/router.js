@@ -48,12 +48,12 @@ router.get("/games/:id", (req, res) => {
   }
 });
 
-router.get("/images", (req, res) => {
-  client
-    .query("SELECT DISTINCT image FROM games")
-    .then((images) =>
-      res.status(200).json(images[0].map((game) => game.image))
-    );
+router.get("/carousel", (req, res) => {
+  client.query("SELECT title, image FROM games").then((dataCarousel) => {
+    const titles = dataCarousel[0].map((game) => game.title);
+    const images = dataCarousel[0].map((game) => game.image);
+    res.status(200).json({ titles, images });
+  });
 });
 /* ************************************************************************* */
 
