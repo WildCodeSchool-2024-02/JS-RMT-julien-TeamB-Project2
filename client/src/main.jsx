@@ -36,7 +36,7 @@ const router = createBrowserRouter([
     },
   },
   {
-    path: "/commentaire",
+    path: "/articles/:id/commentaire",
     element: <Comments />,
   },
   {
