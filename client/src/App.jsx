@@ -8,7 +8,6 @@ function App() {
     <main className="bgColorMain">
       <Navigation />
       <Carousel />
-      <h1 className="styleTitleH1">Bienvenue</h1>
       <Footer />
     </main>
   );

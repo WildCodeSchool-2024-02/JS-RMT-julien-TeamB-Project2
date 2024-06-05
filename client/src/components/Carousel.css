@@ -18,9 +18,9 @@
 }
 
 .carouselImage {
-  width: 90%;
-  min-height: 90rem;
-  max-height: 90rem;
+  width: 80%;
+  min-height: 70rem;
+  max-height: 70rem;
   object-fit: cover;
   background-size: contain;
 }
