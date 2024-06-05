@@ -1,9 +1,12 @@
 import { useState } from "react";
+import "./FormComment.css";
 
 function FormComments() {
   const [Firstname, setFirstname] = useState("");
   const [Lastname, setLastname] = useState("");
   const [comment, setComment] = useState("");
+  const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,8 +15,16 @@ function FormComments() {
     setComment("");
   };
 
+  const handleLike = () => {
+    setLikes(likes + 1);
+  };
+
+  const handleDislike = () => {
+    setDislikes(dislikes + 1);
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form-container" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="Lastname">Nom:</label>
         <input
@@ -44,6 +55,16 @@ function FormComments() {
         />
       </div>
       <button type="submit">Envoyer</button>
+      <div className="like-dislike-buttons">
+        <button type="button" onClick={handleLike}>
+          J'aime
+        </button>
+        <span>{likes}</span>
+        <button type="button" onClick={handleDislike}>
+          Je n'aime pas
+        </button>
+        <span>{dislikes}</span>
+      </div>
     </form>
   );
 }
