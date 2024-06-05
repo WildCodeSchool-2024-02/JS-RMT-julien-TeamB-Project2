@@ -10,19 +10,18 @@ import "./Navigation.css";
 
 function Navigation() {
   const [isHovered, setIsHovered] = useState(false);
-  const [timeoutId, setTimeoutId] = useState(null);
+  let timeoutId = null;
 
   const handleMouseEnter = () => {
-    const id = setTimeout(() => {
+    timeoutId = setTimeout(() => {
       setIsHovered(true);
     }, 500);
-    setTimeoutId(id);
   };
 
   const handleMouseLeave = () => {
     if (timeoutId) {
       clearTimeout(timeoutId);
-      setTimeoutId(null);
+      timeoutId = null;
     }
   };
 
