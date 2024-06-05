@@ -10,20 +10,26 @@ export const useCart = () => useContext(CartContext);
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  // Fonction pour sauvegarder le panier dans le localStorage
+  /**
+   * sauvegarde le panier dans le localStorage
+   * @param {object} newCart 
+   */
   const saveCartToLocalStorage = (newCart) => {
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
-  // Chargement du panier depuis le localStorage lors du montage du composant
   useEffect(() => {
+    // récuperation des éléments dans le local storage
     const savedCart = localStorage.getItem("cart");
     if (savedCart) {
       setCart(JSON.parse(savedCart));
     }
   }, []);
 
-  // Fonction pour mettre à jour le panier et sauvegarder dans le localStorage
+  /**
+   * Maj du panier et sauvegarde dans localStorage
+   * @param {object} newCart 
+   */
   const updateCart = (newCart) => {
     setCart(newCart);
     saveCartToLocalStorage(newCart);
@@ -38,8 +44,17 @@ export function CartProvider({ children }) {
     updateCart(cart.filter((item) => item.id !== id));
   };
 
+  /**
+   * verifie la présence du jeu dans le panier
+   * @param {object} game 
+   * @returns boolean
+   */
   const isInCart = (game) => cart.some((item) => item.id === game.id);
 
+  /**
+   * ajoute ou retire l'article du panier
+   * @param {object} game 
+   */
   const handleGameInCart = (game) => {
     if (isInCart(game)) {
       removeFromCart(game.id);
@@ -48,6 +63,7 @@ export function CartProvider({ children }) {
     }
   };
 
+  // modification de la quantité d'un article dans le panier
   const updateQuantity = (event, game) => {
     if (+event.target.value <= 0) {
       removeFromCart(game.id);
