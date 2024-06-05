@@ -70,7 +70,6 @@ function Navigation() {
       </nav>
       {isHovered && (
         <div
-          className="categoryContainer"
           onMouseLeave={handleCategoryMouseLeave}
         >
           <Category close={handleCloseCategory} />
