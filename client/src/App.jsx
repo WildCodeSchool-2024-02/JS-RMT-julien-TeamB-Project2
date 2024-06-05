@@ -1,13 +1,14 @@
-import "./App.css";
 import Navigation from "./components/Navigation";
+import Carousel from "./components/Carousel";
 import NewsCard from "./components/NewsHome";
 import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
     <main className="bgColorMain">
       <Navigation />
-      <h1 className="styleTitleH1">Bienvenue</h1>
+      <Carousel />
       <NewsCard />
       <Footer />
     </main>

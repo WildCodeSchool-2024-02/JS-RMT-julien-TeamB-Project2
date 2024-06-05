@@ -1,8 +1,8 @@
 .footerContainer {
-  background-image: linear-gradient(#131313, #524d4d);
+  background-image: var(--bg-color-foot);
   display: flex;
   align-items: center;
-  padding: 3rem;
+  padding: 1rem;
   justify-content: space-around;
 }
 
@@ -11,45 +11,45 @@
 }
 
 .iconSocial a:hover img {
-  transform: scale(1.1);
-}
-
-.iconFooter {
-  transition: transform 0.3s ease;
+  transform: var(--logo-transform);
 }
 
 .logoFooter {
-  width: 100px;
+  width: 5rem;
 }
 
-.titleNewsLetter {
-  color: #03a400;
+.logoFooter:hover {
+  transform: scale(1.05);
+}
+
+.newsLetterTitle {
+  color: var(--color-text);
   font-size: 2rem;
 }
 
-.emailSubscription {
+.newsLetterEmail {
   display: flex;
   gap: 1rem;
 }
 
 input[type="email"] {
-  background-image: linear-gradient(#3a3737, #2f2c2cc4);
+  background-image: var(--bg-color-input);
   border-radius: 50rem;
   padding: 0.5rem;
 }
 
-.messageNewsLetter {
-  color: #03a400;
+.newsLetterMessage {
+  color: var(--color-text);
 }
 
-.buttonNewsLetter {
+.newsLetterButton {
   appearance: none;
-  background-color: #03a400;
+  background: var(--bg-color-button);
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 15px;
   box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
   box-sizing: border-box;
-  color: #fff;
+  color: var(--color-text-button);
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
@@ -68,28 +68,50 @@ input[type="email"] {
   white-space: nowrap;
 }
 
-.buttonNewsLetter:focus:not(:focus-visible):not(.focus-visible) {
-  box-shadow: none;
-  outline: none;
+.newsLetterButton:hover {
+  background: var(--bg-color-hover);
 }
 
-.buttonNewsLetter:hover {
-  background-color: #2c974b;
-}
-
-.buttonNewsLetter:focus {
+.newsLetterButton:focus {
   box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
   outline: none;
 }
 
-.buttonNewsLetter:disabled {
+.newsLetterButton:disabled {
   background-color: #94d3a2;
   border-color: rgba(27, 31, 35, 0.1);
   color: rgba(255, 255, 255, 0.8);
   cursor: default;
 }
 
-.buttonNewsLetter:active {
+.newsLetterButton:active {
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+
+@media (max-width: 768px) {
+  .footerContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 2rem;
+  }
+  .iconSocial {
+    display: flex;
+    gap: 5rem;
+  }
+  .newsLetterEmail {
+    flex-direction: column;
+  }
+  .newsLetterContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .newsLetterButton {
+    width: 50%;
+    margin-left: 3rem;
+  }
 }

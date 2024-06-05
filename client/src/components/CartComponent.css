@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--color-text);
+  min-height: 48.9vh;
+  h3 {
+    margin: 2rem;
+  }
 }
 
 .cartContainer {
@@ -11,11 +16,12 @@
   width: 60%;
   height: 8rem;
   border: solid 1px rgb(48, 47, 47);
-  margin: 1rem 0.5rem;
+  margin: 1.5rem;
   border-radius: 2rem;
+  padding: 1rem;
   .cartImg {
-    height: 100px;
-    width: 100px;
+    height: 6.2rem;
+    width: 6.2rem;
     margin: 2rem;
     border-radius: 1rem;
     object-fit: cover;
@@ -27,30 +33,90 @@
 
 .cartContent {
   display: flex;
-  padding: 7rem;
+  align-items: center;
+  justify-content: space-evenly;
   gap: 8rem;
-  justify-content: space-around;
+}
+
+.cartTitleButton {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.cartBinButton {
+  background-image: var(--bg-color-button);
+  border: 1px solid var(--color-text);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--color-text-button);
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-family: "AppleGaramondBoldItalic";
+  font-size: var(--font-size-text);
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  line-height: 1.47059;
+  min-width: 1.875rem;
+  overflow: visible;
+  padding: 0.25rem 0.938rem;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.cartBinButton:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.cartBinButton:hover {
+  background: var(--bg-color-hover);
+  border-color: var(--color-text);
+  text-decoration: none;
+}
+
+.cartBinButton:active {
+  background-image: var(--color-text);
+  border-color: var(--color-text);
+  outline: none;
+}
+
+.cartBinButton:focus {
+  background-image: var(--color-text);
+  outline: none;
+}
+
+.cartSelectQuantite {
+  background: var(--color-text);
+}
+
+.cartQuantiteNumber {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.cartButtonDelete:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
   .cartContainer {
-    width: 60%;
-    height: 8rem;
-    margin: 1rem 0.5rem;
-    border-radius: 2rem;
-    .cartImg {
-      height: 86px;
-      width: 60px;
-      margin: 2rem;
-      border-radius: 1rem;
-      object-fit: cover;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    h2 {
+      font-size: var(--font-size-text);
     }
   }
 
   .cartContent {
-    display: flex;
-    padding: 0rem;
-    gap: 0rem;
-    justify-content: space-around;
+    padding: 2rem;
+    gap: 3rem;
   }
 }
