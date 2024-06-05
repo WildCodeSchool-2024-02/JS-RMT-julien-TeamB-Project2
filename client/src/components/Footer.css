@@ -2,7 +2,7 @@
   background-image: var(--bg-color-foot);
   display: flex;
   align-items: center;
-  padding: 3rem;
+  padding: 1rem;
   justify-content: space-around;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .logoFooter {
-  width: 8rem;
+  width: 5rem;
 }
 
 .logoFooter:hover {
@@ -100,11 +100,18 @@ input[type="email"] {
   }
   .iconSocial {
     display: flex;
-    gap: 1rem;
+    gap: 5rem;
+  }
+  .newsLetterEmail {
+    flex-direction: column;
   }
   .newsLetterContainer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+  }
+  .newsLetterButton {
+    width: 50%;
+    margin-left: 3rem;
   }
 }
