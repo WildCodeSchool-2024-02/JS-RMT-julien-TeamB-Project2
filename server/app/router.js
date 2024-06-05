@@ -47,6 +47,14 @@ router.get("/games/:id", (req, res) => {
     res.status(200).json({});
   }
 });
+
+router.get("/images", (req, res) => {
+  client
+    .query("SELECT DISTINCT image FROM games")
+    .then((images) =>
+      res.status(200).json(images[0].map((game) => game.image))
+    );
+});
 /* ************************************************************************* */
 
 module.exports = router;
