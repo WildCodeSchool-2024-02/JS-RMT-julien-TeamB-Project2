@@ -49,11 +49,11 @@ router.get("/games/:id", (req, res) => {
 });
 
 router.get("/carousel", (req, res) => {
-  client.query("SELECT title, image FROM games").then((dataCarousel) => {
-    const titles = dataCarousel[0].map((game) => game.title);
-    const images = dataCarousel[0].map((game) => game.image);
-    res.status(200).json({ titles, images });
-  });
+  client
+    .query("SELECT title, image FROM games ORDER BY RAND() LIMIT 6 ")
+    .then((dataCarousel) => {
+      res.status(200).json(dataCarousel[0]);
+    });
 });
 /* ************************************************************************* */
 

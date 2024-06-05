@@ -1,26 +1,11 @@
-import { useState, useEffect } from "react";
+import { useLoaderData } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
 import "./Carousel.css";
 
-function Carousel({ carouselData }) {
-  const [images, setImages] = useState([]);
+function Carousel() {
+  const carouselData = useLoaderData();
 
-  useEffect(() => {
-    if (
-      carouselData &&
-      Array.isArray(carouselData.images) &&
-      Array.isArray(carouselData.titles)
-    ) {
-      const { images: imageArray, titles: titleArray } = carouselData;
-      const combinedData = imageArray.map((image, index) => ({
-        image,
-        title: titleArray[index],
-      }));
-      const shuffledImages = [...combinedData].sort(() => 0.5 - Math.random());
-      setImages(shuffledImages.slice(0, 6));
-    }
-  }, [carouselData]);
-  const items = images.map((item) => (
+  const items = carouselData.map((item) => (
     <img
       key={item.title}
       src={item.image}
