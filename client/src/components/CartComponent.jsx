@@ -15,6 +15,7 @@ function CartComponent({ game }) {
           Quantité
           <select className="cartSelectQuantite"
             name="Quantité"
+            value={game.quantity}
             onChange={(event) => updateQuantity(event, game)}
           >
             {[...Array(10)].map((_, quantity) => {
