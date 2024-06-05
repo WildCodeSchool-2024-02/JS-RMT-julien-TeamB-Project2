@@ -1,7 +1,7 @@
 main {
   background: var(--bg-color-main);
 }
-.form-container {
+.formContainer {
   max-width: 31.25rem;
   margin: 0 auto;
   padding: 1.25rem;
@@ -9,15 +9,16 @@ main {
   background: var(--bg-color-cart-component);
   color: var(--color-text);
   min-height: 60vh;
+  font-family: "CaviarDreamsBoldItalic";
 }
 
-.form-container label {
+.formContainer label {
   display: block;
   margin-bottom: 0.313rem;
 }
 
-.form-container input[type="text"],
-.form-container textarea {
+.formContainer input[type="text"],
+.formContainer textarea {
   width: 100%;
   padding: 0.625rem;
   margin-bottom: 0.938rem;
@@ -25,9 +26,9 @@ main {
   border-radius: 0.188rem;
   box-sizing: border-box;
   min-height: 3rem;
-  background: #ced4da;
+  background: var(--bg-color-input);
 }
-.form-container button {
+.formContainer button {
   appearance: none;
   background: var(--bg-color-button);
   border: 1px solid rgba(27, 31, 35, 0.15);
@@ -37,8 +38,7 @@ main {
   color: var(--color-text-button);
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "AppleGaramondBoldItalic";
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.25rem;
@@ -52,18 +52,18 @@ main {
   vertical-align: middle;
   white-space: nowrap;
 }
-.like-dislike-buttons {
+.formCommentButtons {
   margin-top: 0.625rem;
   display: flex;
   justify-content: center;
 }
-.like-dislike-buttons {
+.formCommentButtons {
   margin-top: 0.625rem;
   display: flex;
-  flex-direction: column; /* Ajoutez cette ligne */
-  align-items: center; /* Optionnel : pour centrer les boutons horizontalement */
+  flex-direction: column;
+  align-items: center;
 }
 
-.like-dislike-buttons button {
-  margin-bottom: 0.625rem; /* Ajoutez cette ligne */
+.formCommentButtons button {
+  margin-bottom: 0.625rem;
 }

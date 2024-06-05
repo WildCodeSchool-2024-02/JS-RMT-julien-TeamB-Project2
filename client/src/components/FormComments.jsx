@@ -24,7 +24,7 @@ function FormComments() {
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
+    <form className="formContainer" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="Lastname">Nom:</label>
         <input
@@ -55,7 +55,7 @@ function FormComments() {
         />
       </div>
       <button type="submit">Envoyer</button>
-      <div className="like-dislike-buttons">
+      <div className="formCommentButtons">
         <button type="button" onClick={handleLike}>
           J'aime
         </button>
