@@ -8,7 +8,7 @@
   width: 50%;
   padding: 2rem;
   text-align: center;
-  margin-top: -4rem;
+  margin-top: 20rem;
 }
 
 .categoryMainContainer h2 {
@@ -70,6 +70,11 @@
 @media (max-width: 768px) {
   .categoryMainContainer {
     width: 70%;
+    background: #545454f5;
+    position: fixed;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
   }
   .categoryContainer {
     grid-template-columns: repeat(2, 1fr);

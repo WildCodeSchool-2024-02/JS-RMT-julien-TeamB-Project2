@@ -46,7 +46,10 @@ input[placeholder="Search for a game"] {
     font-size: 0.7rem;
   }
   .gameSearch-dropdown {
-    max-height: 300px;
+    max-height: 18.75rem;
     overflow-y: auto;
+    bottom: 2rem;
+    z-index: 1000;
+    left: 1rem;
   }
 }
