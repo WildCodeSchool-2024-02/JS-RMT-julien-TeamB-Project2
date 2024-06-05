@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   color: var(--color-text);
+  min-height: 48.9vh;
   h3 {
     margin: 2rem;
   }
