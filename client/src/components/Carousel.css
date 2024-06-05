@@ -1,0 +1,33 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+.carouselContainer {
+  text-align: center;
+  margin: 2rem;
+}
+
+.carouselImage {
+  width: 90%;
+  min-height: 90rem;
+  max-height: 90rem;
+  object-fit: cover;
+  background-size: contain;
+}
+
+.alice-carousel__prev-btn-item {
+  color: var(--color-text);
+}
+
+.alice-carousel__next-btn-item {
+  color: var(--color-text);
+}
+
+.alice-carousel__dots-item {
+  background: var(--color-text);
+  color: var(--color-text);
+}
+@media (max-width: 768px) {
+  .carouselImage {
+    min-height: 80rem;
+    max-height: 80rem;
+  }
+}
