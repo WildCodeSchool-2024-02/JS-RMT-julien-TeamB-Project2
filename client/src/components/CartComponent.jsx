@@ -11,9 +11,9 @@ function CartComponent({ game }) {
       <div className="cartContent">
         <h2 className="styleTitleH2">{game.title}</h2>
         <p className="styleText">{game.price} EUR</p>
-        <label>
-          Quantité :
-          <select
+        <label className="cartQuantiteNumber">
+          Quantité
+          <select className="cartSelectQuantite"
             name="Quantité"
             onChange={(event) => updateQuantity(event, game)}
           >
@@ -27,7 +27,7 @@ function CartComponent({ game }) {
             })}
           </select>
         </label>
-        <button
+        <button className="cartButtonDelete"
           type="button"
           onClick={() => {
             handleGameInCart(game);
