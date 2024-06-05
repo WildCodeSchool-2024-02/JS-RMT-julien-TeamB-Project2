@@ -10,7 +10,7 @@ function Catalog() {
   return (
     <main className="bgColorMain">
       <Navigation />
-      <div className="videoGamesPage">
+      <div className="videoGamesPage bgSizeWeb">
         <h1 className="videoGamesTitleH1 styleTitleH1">Catalogue</h1>
         {genres
           .filter(
