@@ -10,17 +10,33 @@ import "./Navigation.css";
 
 function Navigation() {
   const [isHovered, setIsHovered] = useState(false);
+  let timeoutId = null;
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    timeoutId = setTimeout(() => {
+      setIsHovered(true);
+    }, 500);
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      timeoutId = null;
+    }
   };
 
   const handleCloseCategory = () => {
     setIsHovered(false);
+  };
+
+  const handleCategoryMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      setIsHovered(!isHovered);
+    }
   };
 
   return (
@@ -41,7 +57,8 @@ function Navigation() {
               className="bgNavMain burgerButton"
               type="button"
               onMouseEnter={handleMouseEnter}
-              onClick={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onKeyDown={handleKeyDown}
             >
               <img
                 className="navLogoSize"
@@ -50,7 +67,7 @@ function Navigation() {
               />
             </button>
           </li>
-            <GameSearch  />
+          <GameSearch />
           <li>
             <Link to="/panier">
               <img className="navLogoSize" src={logoCart} alt="Logo panier" />
@@ -60,9 +77,7 @@ function Navigation() {
       </nav>
       {isHovered && (
         <div
-          className="categoryContainer"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseLeave={handleCategoryMouseLeave}
         >
           <Category close={handleCloseCategory} />
         </div>
