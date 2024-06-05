@@ -30,6 +30,7 @@ function Category({ close }) {
             <Link
               to={`/?genre=${genre}`}
               className="noTextDecoration styleText"
+              onClick={close}
             >
               {genre}
             </Link>
