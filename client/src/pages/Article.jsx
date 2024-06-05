@@ -9,7 +9,7 @@ function Article() {
   const game = useLoaderData();
 
   return (
-    <main className="bgColorMain">
+    <main className="bgColorMain bgSizeWeb">
       <Navigation />
       <ArticleComponents game={game} />
       <VideoGames

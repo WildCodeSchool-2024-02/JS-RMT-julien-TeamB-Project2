@@ -97,6 +97,7 @@ input[type="email"] {
     gap: 1.5rem;
     text-align: center;
     padding: 2rem;
+    margin-bottom: 3rem;
   }
   .iconSocial {
     display: flex;

@@ -8,9 +8,9 @@ function Catalog() {
   const [searchParams] = useSearchParams();
 
   return (
-    <main className="bgColorMain">
+    <main className="bgColorMain ">
       <Navigation />
-      <div className="videoGamesPage">
+      <div className="videoGamesPage bgSizeWeb">
         <h1 className="videoGamesTitleH1 styleTitleH1">Catalogue</h1>
         {genres
           .filter(
