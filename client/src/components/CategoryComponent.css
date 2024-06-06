@@ -1,8 +1,8 @@
 .categoryMainContainer {
-  position: fixed; /* Remplace absolute par fixed */
-  top: 35%; /* Centre verticalement */
+  position: fixed;
+  top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centre horizontalement */
+  transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: var(--bg-color-dropdown);
   border-radius: 0.5rem;
