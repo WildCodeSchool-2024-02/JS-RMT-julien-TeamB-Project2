@@ -69,7 +69,7 @@ function GameSearch() {
           }}
           aria-label="Toggle search bar"
         >
-          <img className="navLogoSize" src={logoSearch} alt="Logo du site" />
+          <img className="navLogoSize" src={logoSearch} alt="Website logo" />
         </button>
       )}
     </div>
