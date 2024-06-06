@@ -24,30 +24,8 @@
     }
   }
   .articleButton {
-    font-family: "AppleGaramondBoldItalic";
-    font-weight: 400;
-    font-size: var(--font-size-text);
-    color: var(--color-text-button);
-    background: var(--bg-color-button);
-    padding: 0.625rem 1.875rem;
-    border: solid #00cc00 2px;
-    box-shadow: rgb(0, 0, 0) -3px 4px 17px -4px;
-    border-radius: 22px 10px;
-    transition: 349ms;
-    transform: translateY(0);
     display: flex;
     flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-    text-transform: lowercase;
-  }
-  .articleButton:hover {
-    transition: 349ms;
-    padding: 0.625rem 1.125rem;
-    transform: translateY(-0px);
-    background: var(--bg-color-button);
-    color: var(--color-text-button);
-    border: solid 2px #27cf15;
   }
 }
 

@@ -44,27 +44,28 @@
 }
 
 .showMoreButton {
-  font-family: Roboto, sans-serif;
-  font-weight: 0;
-  font-size: 1rem;
+  background: var(--button-bg-color);
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-text);
+  border: 1px solid var(--button-color-border);
+  box-shadow: 0 1px 0 var(--shadow-color);
   color: var(--color-text-button);
-  background: var(--bg-color-button);
   padding: 0.625rem 1.875rem;
-  border: solid #2ccc00 2px;
   box-shadow: none;
   border-radius: 0px 0px 25px 25px;
   transition: 595ms;
   transform: translateY(0);
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
 .showMoreButton:hover {
   transition: 595ms;
   padding: 0.625rem 3.125rem;
   transform: translateY(-0px);
-  background: var(--bg-color-hover);
-  color: var(--color-text-button);
-  border: solid 2px #2ccc00;
+  background: var(--button-color-hover);
+  border-color: var(--color-text);
 }
 
 @media (max-width: 768px) {
