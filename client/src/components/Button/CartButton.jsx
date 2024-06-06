@@ -43,8 +43,9 @@ function CartButton({ game }) {
     <button
       className="styleButton articleButton"
       type="button"
-      onClick={handleCartAction}>
-      {isInCart(game) ? "Supprimer du Panier" : "Ajouter au panier"}
+      onClick={handleCartAction}
+    >
+      {isInCart(game) ? "Remove from Cart" : "Add to Cart"}
     </button>
   );
 }

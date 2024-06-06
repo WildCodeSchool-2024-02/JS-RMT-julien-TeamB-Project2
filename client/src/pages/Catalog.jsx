@@ -11,7 +11,7 @@ function Catalog() {
     <main className="bgColorMain">
       <Navigation />
       <div className="videoGamesPage bgSizeWeb">
-        <h1 className="videoGamesTitleH1 styleTitleH1">Catalogue</h1>
+        <h1 className="videoGamesTitleH1 styleTitleH1">Catalog</h1>
         {genres
           .filter(
             (genre) =>
@@ -28,4 +28,3 @@ function Catalog() {
 }
 
 export default Catalog;
-

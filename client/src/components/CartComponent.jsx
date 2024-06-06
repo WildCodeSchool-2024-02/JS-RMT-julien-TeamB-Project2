@@ -32,12 +32,12 @@ function CartComponent({ game }) {
       </Link>
       <div className="cartContent">
         <h2 className="styleTitleH2">{game.title}</h2>
-        <p className="styleText">{game.price} EUR</p>
+        <p className="styleText">{game.price} €</p>
         <label className="cartQuantiteNumber">
-          Quantité
+          Quantity
           <select
             className="cartSelectQuantite"
-            name="Quantité"
+            name="quantity"
             value={game.quantity}
             onChange={(event) => updateQuantity(event, game)}
           >
@@ -62,7 +62,7 @@ function CartComponent({ game }) {
             cursor: "pointer",
           }}
         >
-          <img src={addGameIcon} alt="Retirer du panier" />
+          <img src={addGameIcon} alt="Remove from cart" />
         </button>
       </div>
     </section>
