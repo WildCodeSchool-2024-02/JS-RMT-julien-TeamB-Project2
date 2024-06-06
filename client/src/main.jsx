@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <App />,
     loader: () =>
       axios
-        .get(`${import.meta.env.VITE_API_URL}/api/carousel`)
+        .get(`${import.meta.env.VITE_API_URL}/api/games/title&image`)
         .then((res) => res.data),
   },
   {

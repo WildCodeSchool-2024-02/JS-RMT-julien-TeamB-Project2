@@ -48,7 +48,7 @@ router.get("/games/:id", (req, res) => {
   }
 });
 
-router.get("/carousel", (req, res) => {
+router.get("/games/title&image", (req, res) => {
   client
     .query("SELECT title, image FROM games ORDER BY RAND() LIMIT 6 ")
     .then((dataCarousel) => {
