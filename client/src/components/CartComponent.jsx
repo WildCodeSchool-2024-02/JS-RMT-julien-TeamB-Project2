@@ -8,7 +8,7 @@ function CartComponent({ game }) {
 
   return (
     <section className="cartContainer bgCartContainer">
-      <Link to={`/article/${game.id}`}>
+      <Link to={`/articles/${game.id}`}>
         <img className="cartImg" src={game.image} alt={game.title} />
       </Link>
       <div className="cartContent">
