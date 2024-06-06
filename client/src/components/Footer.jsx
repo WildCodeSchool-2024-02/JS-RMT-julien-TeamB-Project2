@@ -30,7 +30,7 @@ function Footer() {
         />
       </section>
       <section>
-        <Link to="/app">
+        <Link to="/">
           <img
             className="logoFooter"
             src={logoGamingZone}

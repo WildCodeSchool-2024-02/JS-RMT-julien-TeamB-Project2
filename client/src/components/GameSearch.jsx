@@ -52,7 +52,7 @@ function GameSearch() {
           <ul className="gameSearch-dropdown">
             {games.map((game) => (
               <li className="gameDropDownList" key={game.id}>
-                <Link to={`/articles/${game.id}`}>{game.title}</Link>
+                <Link to={`/article/${game.id}`}>{game.title}</Link>
               </li>
             ))}
           </ul>
