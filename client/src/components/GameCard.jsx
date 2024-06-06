@@ -5,7 +5,7 @@ import "./GameCard.css";
 function GameCard({ game, cls }) {
   return (
     <li>
-      <Link to={`/article/${game.id}`}>
+      <Link to={`/articles/${game.id}`}>
         <img
           className={`gameCardImg ${cls}`}
           src={game.image}
