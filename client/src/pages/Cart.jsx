@@ -17,7 +17,7 @@ function Cart() {
       <div className="cartTitleButton">
         <h1 className="styleTitleH1">My cart</h1>
         <button className="cartBinButton" type="button" onClick={clearCart}>
-          Clear the cart
+          Empty the cart
         </button>
       </div>
       <section className="cartMainContainer bgSizeWeb">

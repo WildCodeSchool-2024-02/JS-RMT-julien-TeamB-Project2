@@ -15,7 +15,7 @@ function CartComponent({ game }) {
           Quantity
           <select
             className="cartSelectQuantite"
-            name="Quantité"
+            name="quantity"
             value={game.quantity}
             onChange={(event) => updateQuantity(event, game)}
           >
