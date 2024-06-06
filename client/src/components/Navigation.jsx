@@ -70,7 +70,11 @@ function Navigation() {
           <GameSearch />
           <li>
             <Link to="/cart">
-              <img className="navLogoSize" src={logoCart} alt="Logo panier" />
+              <img
+                className="navLogoSize"
+                src={logoCart}
+                alt="Shopping cart logo"
+              />
             </Link>
           </li>
         </ul>
