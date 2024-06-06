@@ -4,7 +4,7 @@ function CartButton({ game }) {
   const { handleGameInCart, isInCart } = useCart();
   return (
     <button
-      className="articleButton"
+      className="styleButton articleButton"
       type="button"
       onClick={() => handleGameInCart(game)}
     >

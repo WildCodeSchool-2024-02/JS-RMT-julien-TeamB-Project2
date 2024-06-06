@@ -16,14 +16,19 @@
 #root {
   --color-text: #89fc00;
   --color-text-button: #f8f8f8;
+  --button-color-border: #026800;
+  --button-color-hover: linear-gradient(#026800, #618214);
+  --button-bg-color: linear-gradient(#89fc00, #026800);
+  --shadow-color: #1e2709;
   --bg-color-main: linear-gradient(#424242, #111111);
   --bg-color-nav: linear-gradient(#9492a4, #424141);
   --bg-color-foot: linear-gradient(#0d0d0d, #73737a);
   --bg-color-cart-component: linear-gradient(#618214, #1e2709);
-  --bg-color-button: linear-gradient(#89fc00, #026800);
   --bg-color-input: linear-gradient(#9492a4, #545454);
   --bg-color-dropdown: #545454;
   --bg-color-hover: linear-gradient(#026800, #618214);
+  --font-family-title: "AppleGaramondBoldItalic";
+  --font-family-text: "CaviarDreamsBoldItalic";
   --font-size-title-h1: 2rem;
   --font-size-title-h2: 1.5rem;
   --font-size-text: 1rem;
@@ -52,17 +57,45 @@
 .styleTitleH1 {
   color: var(--color-text);
   font-size: var(--font-size-title-h1);
-  font-family: "AppleGaramondBoldItalic";
+  font-family: var(--font-family-title);
 }
 .styleTitleH2 {
   color: var(--color-text);
   font-size: var(--font-size-title-h2);
-  font-family: "AppleGaramondBoldItalic";
+  font-family: var(--font-family-title);
 }
 .styleText {
   color: var(--color-text);
   font-size: var(--font-size-text);
-  font-family: "CaviarDreamsBoldItalic";
+  font-family: var(--font-family-text);
+}
+
+.styleButton {
+  background: var(--button-bg-color);
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-text);
+  border: 1px solid var(--button-color-border);
+  border-radius: 2rem;
+  box-shadow: 0 1px 0 var(--shadow-color);
+  color: var(--color-text-button);
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.styleButton:hover {
+  background: var(--button-color-hover);
+  border-color: var(--color-text);
+  text-decoration: none;
 }
 
 .noTextDecoration {
