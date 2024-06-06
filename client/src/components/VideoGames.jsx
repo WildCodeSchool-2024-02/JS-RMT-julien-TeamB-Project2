@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
 import GameCard from "./GameCard";
 import "./VideoGames.css";
 
