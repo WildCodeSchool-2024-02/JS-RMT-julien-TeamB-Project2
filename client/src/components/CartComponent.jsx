@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-unresolved
+import { toast } from 'sonner';
 import "./CartComponent.css";
 import { useCart } from "../context/CartContext";
 
@@ -6,6 +8,23 @@ import addGameIcon from "../assets/images/addGameIcon.png";
 function CartComponent({ id, title, image, price }) {
   const { removeFromCart } = useCart();
 
+  const handleRemoveFromCart = () => {
+    toast.info("The game has been removed from your cart !", {
+      position: "bottom-right",
+      duration: 2000,
+      expand: false,
+      style: {
+        height: "5rem",
+        width: "20rem",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+      },
+    });
+    removeFromCart(id);
+  };
+
   return (
     <section className="cartContainer bgCartContainer">
       <img className="cartImg" src={image} alt={title} />
@@ -13,9 +32,7 @@ function CartComponent({ id, title, image, price }) {
         <p className="styleText">{price} EUR</p>
         <button 
           type="button"
-          onClick={() => {
-            removeFromCart(id);
-          }}
+          onClick={handleRemoveFromCart}
           style={{
             background: "none",
             border: "none",
