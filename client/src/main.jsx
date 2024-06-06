@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import axios from "axios";
+// eslint-disable-next-line import/no-unresolved
+import { Toaster } from 'sonner';
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import App from "./App";
@@ -48,5 +51,6 @@ root.render(
     <CartProvider>
       <RouterProvider router={router} />
     </CartProvider>
+    <Toaster richColors expand />
   </React.StrictMode>
 );
