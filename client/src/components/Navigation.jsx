@@ -15,7 +15,7 @@ function Navigation() {
   const handleMouseEnter = () => {
     timeoutId = setTimeout(() => {
       setIsHovered(true);
-    }, 500);
+    }, 250);
   };
 
   const handleMouseLeave = () => {
