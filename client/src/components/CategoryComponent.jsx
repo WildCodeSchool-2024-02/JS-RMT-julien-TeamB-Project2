@@ -28,7 +28,7 @@ function Category({ close }) {
         {genres.map((genre) => (
           <li className="styleText" key={genre}>
             <Link
-              to={`/?genre=${genre}`}
+              to={`/catalog?genre=${genre}`}
               className="noTextDecoration styleText"
               onClick={close}
             >
@@ -37,7 +37,7 @@ function Category({ close }) {
           </li>
         ))}
       </ul>
-      <Link className="noTextDecoration styleText allLink" to="/">
+      <Link className="noTextDecoration styleText allLink" to="/catalog">
         Toutes les catégories
       </Link>
     </section>
