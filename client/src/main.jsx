@@ -17,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/App",
     element: <App />,
+    loader: () =>
+      axios
+        .get(`${import.meta.env.VITE_API_URL}/api/carousel`)
+        .then((res) => res.data),
   },
   {
     path: "/",

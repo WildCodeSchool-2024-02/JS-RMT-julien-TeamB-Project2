@@ -2,11 +2,10 @@
 import { toast } from 'sonner';
 import "./CartComponent.css";
 import { useCart } from "../context/CartContext";
-
 import addGameIcon from "../assets/images/addGameIcon.png";
 
-function CartComponent({ id, title, image, price }) {
-  const { removeFromCart } = useCart();
+function CartComponent({ game }) {
+  const { updateQuantity, handleGameInCart } = useCart();
 
   const handleRemoveFromCart = () => {
     toast.info("The game has been removed from your cart !", {
@@ -22,15 +21,33 @@ function CartComponent({ id, title, image, price }) {
         textAlign: "center",
       },
     });
-    removeFromCart(id);
+    handleGameInCart(game);
   };
 
   return (
     <section className="cartContainer bgCartContainer">
-      <img className="cartImg" src={image} alt={title} />
-        <h2 className="styleTitleH2">{title}</h2>
-        <p className="styleText">{price} EUR</p>
-        <button 
+      <img className="cartImg" src={game.image} alt={game.title} />
+      <div className="cartContent">
+        <h2 className="styleTitleH2">{game.title}</h2>
+        <p className="styleText">{game.price} EUR</p>
+        <label className="cartQuantiteNumber">
+          Quantité
+          <select className="cartSelectQuantite"
+            name="Quantité"
+            value={game.quantity}
+            onChange={(event) => updateQuantity(event, game)}
+          >
+            {[...Array(10)].map((_, quantity) => {
+              const key = quantity + 1;
+              return (
+                <option key={key} value={key}>
+                  {key}
+                </option>
+              );
+            })}
+          </select>
+        </label>
+        <button className="cartButtonDelete"
           type="button"
           onClick={handleRemoveFromCart}
           style={{
@@ -42,6 +59,7 @@ function CartComponent({ id, title, image, price }) {
         >
           <img src={addGameIcon} alt="Retirer du panier" />
         </button>
+      </div>
     </section>
   );
 }

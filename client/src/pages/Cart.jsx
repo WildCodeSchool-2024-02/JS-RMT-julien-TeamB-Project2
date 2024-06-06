@@ -38,9 +38,8 @@ function Cart() {
         <button className="cartBinButton" type="button" onClick={handleClearCart}>
           Vider le panier
         </button>
-
       </div>
-      <section className="cartMainContainer">
+      <section className="cartMainContainer bgSizeWeb">
         {cart.length === 0 ? (
           <p>Votre panier est vide.</p>
         ) : (

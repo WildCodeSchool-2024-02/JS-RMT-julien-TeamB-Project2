@@ -47,6 +47,14 @@ router.get("/games/:id", (req, res) => {
     res.status(200).json({});
   }
 });
+
+router.get("/carousel", (req, res) => {
+  client
+    .query("SELECT title, image FROM games ORDER BY RAND() LIMIT 6 ")
+    .then((dataCarousel) => {
+      res.status(200).json(dataCarousel[0]);
+    });
+});
 /* ************************************************************************* */
 
 module.exports = router;

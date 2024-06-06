@@ -1,34 +1,82 @@
 .categoryMainContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  h2 {
-    margin-bottom: 20px;
-  }
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: var(--bg-color-dropdown);
+  border-radius: 0.5rem;
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.categoryMainContainer h2 {
+  margin-top: 1rem;
 }
 
 .categoryContainer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+  gap: 1rem;
   list-style-type: none;
-  padding: 0;
+  padding: 2.438rem;
   margin: 0;
-  width: 80rem;
-  li {
-    padding: 10px;
-    text-align: center;
+}
 
-    &:last-child {
-      margin-bottom: 30px;
-    }
-  }
+.categoryContainer li {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.categoryContainer li a {
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: color 0.3s;
+}
+
+.categoryContainer li:hover {
+  transform: scale(1.1);
+}
+
+.categoryContainer li a:hover {
+  color: var(--color-text-button);
+}
+
+.allLink {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: color 0.3s;
+}
+
+.allLink:hover {
+  color: var(--color-text-button);
+  transform: scale(1.1);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0.4rem;
+  right: 1rem;
 }
 
 @media (max-width: 768px) {
+  .categoryMainContainer {
+    width: 70%;
+    background: #545454f5;
+    position: fixed;
+    padding: 0.625rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 15rem;
+  }
   .categoryContainer {
-    grid-template-columns: repeat(3, 1fr);
-    width: 40rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

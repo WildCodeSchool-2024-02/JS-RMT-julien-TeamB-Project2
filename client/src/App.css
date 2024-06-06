@@ -27,6 +27,11 @@
   --font-size-title-h1: 2rem;
   --font-size-title-h2: 1.5rem;
   --font-size-text: 1rem;
+  --logo-transform: scale(1.1);
+}
+
+.bgSizeWeb {
+  min-height: 100vh;
 }
 
 .bgColorMain {
