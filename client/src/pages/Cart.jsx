@@ -35,9 +35,8 @@ function Cart() {
       <Navigation />
       <div className="cartTitleButton">
         <h1 className="styleTitleH1">My cart</h1>
-        <button className="styleButton" type="button" onClick={clearCart}>
+        <button className="styleButton" type="button" onClick={handleClearCart}>
           Empty the cart
-
         </button>
       </div>
       <section className="cartMainContainer bgSizeWeb">
