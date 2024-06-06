@@ -1,32 +1,36 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
 import GameCard from "./GameCard";
 import "./VideoGames.css";
 
 function VideoGames({ genre, gameId, cls }) {
   const [gamesByGenre, setGamesByGenre] = useState([]);
   const [showCount, setShowCount] = useState(4);
-  const minimalLenght = cls === "article" ? 1 : 0;
+  const minimalLength = cls === "article" ? 1 : 0;
+
   const handleShowMore = () => {
-    setShowCount(showCount + 4);
+    setShowCount((prevCount) => prevCount + 4);
   };
 
-  const getGames = () => {
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/api/games?genre=${genre}`)
-      .then((res) => setGamesByGenre(res.data))
-      .catch((err) => console.error(err));
+  const fetchGames = async () => {
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/games?genre=${genre}`
+      );
+      setGamesByGenre(response.data);
+    } catch (error) {
+      console.error("Error fetching games:", error);
+    }
   };
 
   useEffect(() => {
-    getGames();
-    // eslint-disable-next-line
-  }, []);
+    fetchGames();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [genre, gameId]);
 
   return (
     <section className="videoGamesPage bgSizeWeb">
-      {gamesByGenre.length > minimalLenght && (
+      {gamesByGenre.length > minimalLength && (
         <>
           <h2 className="videoGamesTitleH2 styleTitleH2">{genre}</h2>
           <ul className="videoGamesCardContainer">
