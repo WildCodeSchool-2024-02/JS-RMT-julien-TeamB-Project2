@@ -7,6 +7,7 @@ import "./VideoGames.css";
 function VideoGames({ genre, gameId, cls }) {
   const [gamesByGenre, setGamesByGenre] = useState([]);
   const [showCount, setShowCount] = useState(4);
+  const minimalLenght = cls === "article" ? 1 : 0;
   const handleShowMore = () => {
     setShowCount(showCount + 4);
   };
@@ -24,26 +25,30 @@ function VideoGames({ genre, gameId, cls }) {
   }, []);
 
   return (
-    <main className="videoGamesPage">
-      <h2 className="videoGamesTitleH2 styleTitleH2">{genre}</h2>
-      <ul className="videoGamesCardContainer">
-        {gamesByGenre
-          .filter((game) => game.id !== gameId)
-          .slice(0, showCount)
-          .map((game) => (
-            <GameCard key={game.id} game={game} cls={cls} />
-          ))}
-      </ul>
-      {gamesByGenre.length > showCount && (
-        <button
-          className="showMoreButton"
-          type="button"
-          onClick={handleShowMore}
-        >
-          Afficher plus
-        </button>
+    <section className="videoGamesPage bgSizeWeb">
+      {gamesByGenre.length > minimalLenght && (
+        <>
+          <h2 className="videoGamesTitleH2 styleTitleH2">{genre}</h2>
+          <ul className="videoGamesCardContainer">
+            {gamesByGenre
+              .filter((game) => game.id !== gameId)
+              .slice(0, showCount)
+              .map((game) => (
+                <GameCard key={game.id} game={game} cls={cls} />
+              ))}
+          </ul>
+          {gamesByGenre.length > showCount && (
+            <button
+              className="showMoreButton"
+              type="button"
+              onClick={handleShowMore}
+            >
+              Afficher plus
+            </button>
+          )}
+        </>
       )}
-    </main>
+    </section>
   );
 }
 
