@@ -43,7 +43,7 @@ function CartButton({ game }) {
     <button
       className="styleButton articleButton"
       type="button"
-      onClick={() => handleGameInCart(game)}
+      onClick={handleCartAction}
     >
       {isInCart(game) ? "Remove from Cart" : "Add to Cart"}
     </button>
