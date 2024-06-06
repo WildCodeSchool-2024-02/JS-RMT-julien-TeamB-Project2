@@ -35,7 +35,7 @@ function Cart() {
       <Navigation />
       <div className="cartTitleButton">
         <h1 className="styleTitleH1">Mon panier</h1>
-        <button className="cartBinButton" type="button" onClick={handleClearCart}>
+        <button className="styleButton " type="button" onClick={handleClearCart}>
           Vider le panier
         </button>
       </div>
