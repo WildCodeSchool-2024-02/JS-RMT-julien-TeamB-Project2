@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./Footer.css";
+import "../App.css";
 
 function SubscriptionForm() {
   const form = useRef();
@@ -30,7 +31,11 @@ function SubscriptionForm() {
           required
           placeholder="*Adresse e-mail"
         />
-        <input className="newsLetterButton" type="submit" value="Send" />
+        <input
+          className="styleButton newsLetterButton"
+          type="submit"
+          value="Send"
+        />
       </form>
     </section>
   );
