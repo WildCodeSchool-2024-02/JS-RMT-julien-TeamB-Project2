@@ -48,7 +48,7 @@ function Navigation() {
               <img
                 className="navLogoSize"
                 src={logoGamingZone}
-                alt="Logo du site"
+                alt="Logo Website"
               />
             </Link>
           </li>
@@ -63,7 +63,7 @@ function Navigation() {
               <img
                 className="navLogoSize"
                 src={logoCategory}
-                alt="Logo catégorie"
+                alt="Logo catégory"
               />
             </button>
           </li>
