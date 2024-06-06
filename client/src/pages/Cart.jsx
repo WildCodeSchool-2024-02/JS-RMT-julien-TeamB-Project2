@@ -15,14 +15,14 @@ function Cart() {
     <main className="bgColorMain">
       <Navigation />
       <div className="cartTitleButton">
-        <h1 className="styleTitleH1">Mon panier</h1>
+        <h1 className="styleTitleH1">My cart</h1>
         <button className="cartBinButton" type="button" onClick={clearCart}>
-          Vider le panier
+          Clear the cart
         </button>
       </div>
       <section className="cartMainContainer bgSizeWeb">
         {cart.length === 0 ? (
-          <p>Votre panier est vide.</p>
+          <p>Your cart is empty.</p>
         ) : (
           cart.map((game) => <CartComponent key={game.id} game={game} />)
         )}

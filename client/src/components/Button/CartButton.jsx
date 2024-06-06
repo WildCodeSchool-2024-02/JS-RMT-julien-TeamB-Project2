@@ -8,7 +8,7 @@ function CartButton({ game }) {
       type="button"
       onClick={() => handleGameInCart(game)}
     >
-      {isInCart(game) ? "Supprimer du Panier" : "Ajouter au panier"}
+      {isInCart(game) ? "Remove from Cart" : "Add to Cart"}
     </button>
   );
 }

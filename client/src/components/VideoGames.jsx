@@ -40,7 +40,7 @@ function VideoGames({ genre, gameId, cls }) {
           type="button"
           onClick={handleShowMore}
         >
-          Afficher plus
+          Show more
         </button>
       )}
     </main>

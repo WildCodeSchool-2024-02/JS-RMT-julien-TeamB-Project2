@@ -10,10 +10,11 @@ function CartComponent({ game }) {
       <img className="cartImg" src={game.image} alt={game.title} />
       <div className="cartContent">
         <h2 className="styleTitleH2">{game.title}</h2>
-        <p className="styleText">{game.price} EUR</p>
+        <p className="styleText">{game.price} €</p>
         <label className="cartQuantiteNumber">
-          Quantité
-          <select className="cartSelectQuantite"
+          Quantity
+          <select
+            className="cartSelectQuantite"
             name="Quantité"
             value={game.quantity}
             onChange={(event) => updateQuantity(event, game)}
@@ -28,7 +29,8 @@ function CartComponent({ game }) {
             })}
           </select>
         </label>
-        <button className="cartButtonDelete"
+        <button
+          className="cartButtonDelete"
           type="button"
           onClick={() => {
             handleGameInCart(game);
@@ -40,7 +42,7 @@ function CartComponent({ game }) {
             cursor: "pointer",
           }}
         >
-          <img src={addGameIcon} alt="Retirer du panier" />
+          <img src={addGameIcon} alt="Remove from cart" />
         </button>
       </div>
     </section>

@@ -34,7 +34,7 @@ function Navigation() {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       setIsHovered(!isHovered);
     }
   };
@@ -70,15 +70,17 @@ function Navigation() {
           <GameSearch />
           <li>
             <Link to="/panier">
-              <img className="navLogoSize" src={logoCart} alt="Logo panier" />
+              <img
+                className="navLogoSize"
+                src={logoCart}
+                alt="Shopping cart logo"
+              />
             </Link>
           </li>
         </ul>
       </nav>
       {isHovered && (
-        <div
-          onMouseLeave={handleCategoryMouseLeave}
-        >
+        <div onMouseLeave={handleCategoryMouseLeave}>
           <Category close={handleCloseCategory} />
         </div>
       )}

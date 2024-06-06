@@ -38,7 +38,7 @@ function Category({ close }) {
         ))}
       </ul>
       <Link className="noTextDecoration styleText allLink" to="/">
-        Toutes les catégories
+        all categories
       </Link>
     </section>
   );
