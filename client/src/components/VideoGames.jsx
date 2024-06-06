@@ -24,9 +24,7 @@ function VideoGames({ genre, gameId, cls }) {
   };
 
   useEffect(() => {
-    if (genre) {
-      fetchGames();
-    }
+    fetchGames();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [genre, gameId]);
 
