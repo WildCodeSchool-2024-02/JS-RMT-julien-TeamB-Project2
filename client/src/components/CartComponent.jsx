@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/no-unresolved
 import { toast } from 'sonner';
 import "./CartComponent.css";
+import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import addGameIcon from "../assets/images/addGameIcon.png";
 
@@ -26,13 +27,16 @@ function CartComponent({ game }) {
 
   return (
     <section className="cartContainer bgCartContainer">
-      <img className="cartImg" src={game.image} alt={game.title} />
+      <Link to={`/articles/${game.id}`}>
+        <img className="cartImg" src={game.image} alt={game.title} />
+      </Link>
       <div className="cartContent">
         <h2 className="styleTitleH2">{game.title}</h2>
         <p className="styleText">{game.price} EUR</p>
         <label className="cartQuantiteNumber">
           Quantité
-          <select className="cartSelectQuantite"
+          <select
+            className="cartSelectQuantite"
             name="Quantité"
             value={game.quantity}
             onChange={(event) => updateQuantity(event, game)}
@@ -47,7 +51,8 @@ function CartComponent({ game }) {
             })}
           </select>
         </label>
-        <button className="cartButtonDelete"
+        <button
+          className="cartButtonDelete"
           type="button"
           onClick={handleRemoveFromCart}
           style={{
