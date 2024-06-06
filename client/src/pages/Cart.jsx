@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-unresolved
+import { toast } from 'sonner';
 import { useCart } from "../context/CartContext";
 import CartComponent from "../components/CartComponent";
 import Navigation from "../components/Navigation";
@@ -11,6 +13,23 @@ function Cart() {
     .reduce((acc, game) => acc + game.price * game.quantity, 0)
     .toFixed(2);
 
+    const handleClearCart = () => {
+      toast.info("Your cart has been emptied !", {
+        position: "bottom-right",
+        duration: 2000,
+        expand: false,
+        style: {
+          height: "5rem",
+          width: "20rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+        },
+      });
+      clearCart();
+    };
+
   return (
     <main className="bgColorMain">
       <Navigation />
@@ -18,6 +37,7 @@ function Cart() {
         <h1 className="styleTitleH1">My cart</h1>
         <button className="cartBinButton" type="button" onClick={clearCart}>
           Empty the cart
+
         </button>
       </div>
       <section className="cartMainContainer bgSizeWeb">

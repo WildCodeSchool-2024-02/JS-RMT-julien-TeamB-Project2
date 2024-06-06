@@ -1,17 +1,15 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import "./Carousel.css";
 
 function Carousel() {
   const carouselData = useLoaderData();
 
   const items = carouselData.map((item) => (
-    <img
-      key={item.title}
-      src={item.image}
-      alt={item.title}
-      className="carouselImage"
-    />
+    <Link to={`/articles/${item.id}`} key={item.title}>
+      <img className="carouselImage" src={item.image} alt={item.title} />
+    </Link>
   ));
 
   return (

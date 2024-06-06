@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import axios from "axios";
+// eslint-disable-next-line import/no-unresolved
+import { Toaster } from 'sonner';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import { CartProvider } from "./context/CartContext";
-
 import App from "./App";
 import Catalog from "./pages/Catalog";
 import Article from "./pages/Article";
@@ -13,7 +13,7 @@ import Cart from "./pages/Cart";
 
 const router = createBrowserRouter([
   {
-    path: "/App",
+    path: "/",
     element: <App />,
     loader: () =>
       axios
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         .then((res) => res.data),
   },
   {
-    path: "/",
+    path: "/catalog",
     element: <Catalog />,
     loader: () =>
       axios
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     },
   },
   {
-    path: "/panier",
+    path: "/cart",
     element: <Cart />,
   },
 ]);
@@ -51,5 +51,6 @@ root.render(
     <CartProvider>
       <RouterProvider router={router} />
     </CartProvider>
+    <Toaster richColors expand />
   </React.StrictMode>
 );

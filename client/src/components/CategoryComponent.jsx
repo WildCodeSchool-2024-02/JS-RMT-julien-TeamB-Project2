@@ -28,7 +28,7 @@ function Category({ close }) {
         {genres.map((genre) => (
           <li className="styleText" key={genre}>
             <Link
-              to={`/?genre=${genre}`}
+              to={`/catalog?genre=${genre}`}
               className="noTextDecoration styleText"
               onClick={close}
             >

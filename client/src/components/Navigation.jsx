@@ -44,7 +44,7 @@ function Navigation() {
       <nav className="navContainer navBg">
         <ul className="navButtonContainer">
           <li>
-            <Link to="/app">
+            <Link to="/">
               <img
                 className="navLogoSize"
                 src={logoGamingZone}
@@ -69,7 +69,7 @@ function Navigation() {
           </li>
           <GameSearch />
           <li>
-            <Link to="/panier">
+            <Link to="/cart">
               <img
                 className="navLogoSize"
                 src={logoCart}
