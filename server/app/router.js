@@ -49,7 +49,7 @@ router.get("/games/:id", (req, res) => {
   client
     .query("SELECT * FROM games WHERE id = ?", [req.params.id])
     .then((result) => res.status(200).json(result[0][0]));
-});
+
 
 /* ************************************************************************* */
 
