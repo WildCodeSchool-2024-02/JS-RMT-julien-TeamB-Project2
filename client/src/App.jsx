@@ -1,5 +1,6 @@
 import Navigation from "./components/Navigation";
 import Carousel from "./components/Carousel";
+import NewsCard from "./components/NewsHome";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -8,6 +9,7 @@ function App() {
     <main className="bgColorMain">
       <Navigation />
       <Carousel />
+      <NewsCard />
       <Footer />
     </main>
   );
