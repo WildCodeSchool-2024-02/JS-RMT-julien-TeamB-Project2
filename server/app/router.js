@@ -7,7 +7,6 @@ const client = require("../database/client");
 // Define Your API Routes Here
 /* ************************************************************************* */
 
-// Route to get a list of games
 router.get("/games", (req, res) => {
   if (req.query.genre) {
     client
