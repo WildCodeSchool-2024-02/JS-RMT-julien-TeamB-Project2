@@ -1,6 +1,9 @@
 const express = require("express");
+
 const games = require("../database/data");
+
 const router = express.Router();
+
 const client = require("../database/client");
 
 /* ************************************************************************* */
