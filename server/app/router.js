@@ -19,9 +19,8 @@ router.get("/games", (req, res) => {
       });
   } else if (req.query.title) {
     client
-      .query("SELECT * FROM games WHERE title = ?", [
-        req.query.title.toLowerCase(),
-      ])
+      .query("SELECT * FROM games WHERE title LIKE ?", [`%${req.query.title}%`]
+      )
       .then((allTitle) => {
         res.status(200).json(allTitle[0]);
       });
