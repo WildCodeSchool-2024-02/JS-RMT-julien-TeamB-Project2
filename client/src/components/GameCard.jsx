@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import "./GameCard.css";
 
 function GameCard({ game, cls }) {

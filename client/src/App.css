@@ -36,17 +36,16 @@
 }
 
 .bgSizeWeb {
-  min-height: 100vh;
+  min-height: 70vh;
+  overflow: hidden;
 }
 
 .bgColorMain {
   background: var(--bg-color-main);
-  background-size: cover;
 }
 
 .bgNavMain {
   background: none;
-  background-size: cover;
   border: none;
 }
 

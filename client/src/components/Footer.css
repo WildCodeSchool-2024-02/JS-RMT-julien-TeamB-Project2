@@ -2,8 +2,9 @@
   background-image: var(--bg-color-foot);
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 20rem;
   padding: 1rem;
-  justify-content: space-around;
 }
 
 .iconSocial {
@@ -57,6 +58,8 @@ input[type="email"] {
     gap: 5rem;
   }
   .newsLetterEmail {
+    display: flex;
+    align-items: center;
     flex-direction: column;
   }
   .newsLetterContainer {
@@ -65,7 +68,10 @@ input[type="email"] {
     gap: 0.5rem;
   }
   .newsLetterButton {
-    width: 50%;
-    margin-left: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 7rem;
   }
 }

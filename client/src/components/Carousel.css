@@ -7,8 +7,32 @@
     color: var(--color-text);
   }
 
+  .alice-carousel__prev-btn-item {
+    background: var(--button-bg-color);
+    color: var(--color-text-button);
+    font-family: var(--font-family-text);
+    box-shadow: 0 1px 0 var(--shadow-color);
+    border: 1px solid var(--button-color-border);
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+  }
+  .alice-carousel__prev-btn-item:hover {
+    background: var(--button-color-hover);
+    border-color: var(--color-text);
+  }
+
   .alice-carousel__next-btn-item {
-    color: var(--color-text);
+    background: var(--button-bg-color);
+    color: var(--color-text-button);
+    font-family: var(--font-family-text);
+    box-shadow: 0 1px 0 var(--shadow-color);
+    border: 1px solid var(--button-color-border);
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+  }
+  .alice-carousel__next-btn-item:hover {
+    background: var(--button-color-hover);
+    border-color: var(--color-text);
   }
 
   .alice-carousel__dots-item {
@@ -18,16 +42,18 @@
 }
 
 .carouselImage {
-  width: 80%;
-  min-height: 70rem;
-  max-height: 70rem;
+  width: 70%;
+  min-height: 45rem;
+  max-height: 45rem;
   object-fit: cover;
   background-size: contain;
 }
 
 @media (max-width: 768px) {
   .carouselImage {
-    min-height: 80rem;
-    max-height: 80rem;
+    width: 95%;
+    min-height: 56rem;
+    max-height: 56rem;
+    padding-top: 2rem;
   }
 }

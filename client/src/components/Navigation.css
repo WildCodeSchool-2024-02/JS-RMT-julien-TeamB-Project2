@@ -43,7 +43,13 @@
     z-index: 1000;
     top: auto;
   }
-  .navLogoSize {
-    max-width: 3rem;
+  .navButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    .navLogoSize {
+      max-width: 3rem;
+    }
   }
 }

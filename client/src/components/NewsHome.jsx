@@ -29,7 +29,7 @@ function NewsCard() {
   return (
     <section>
       <div className="newsSection">
-        <h2 className="newsSectionTitle">News of the day</h2>
+        <h2 className="newsSectionTitle">Daily News</h2>
         <div className="newsCard">
           {articles.map((article) => (
             <a
