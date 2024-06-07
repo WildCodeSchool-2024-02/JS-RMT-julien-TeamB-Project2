@@ -12,15 +12,19 @@ const client = require("../database/client");
 // Route to get a list of items
 router.get("/games", (req, res) => {
   if (req.query.genre) {
-    res
-      .status(200)
-      .json(games.filter((game) => game.genre === req.query.genre));
+    client
+      .query("SELECT * FROM games WHERE genre = ?", [req.query.genre])
+      .then((result) => {
+        res.status(200).json(result[0]);
+      });
   } else if (req.query.title) {
-    const { title } = req.query;
-    const flGames = games.filter((g) =>
-      g.title.toLowerCase().includes(title.toLowerCase())
-    );
-    res.status(200).json(flGames);
+    client
+      .query("SELECT * FROM games WHERE title = ?", [
+        req.query.title.toLowerCase(),
+      ])
+      .then((allTitle) => {
+        res.status(200).json(allTitle[0]);
+      });
   } else {
     res.status(200).json(games);
   }
