@@ -23,6 +23,11 @@ router.get("/games", (req, res) => {
       )
       .then((allTitle) => {
         res.status(200).json(allTitle[0]);
+  } else if (req.query.type === "carousel") {
+    client
+      .query("SELECT title, image, id FROM games ORDER BY RAND() LIMIT 6")
+      .then((dataCarousel) => {
+        res.status(200).json(dataCarousel[0]);
       });
   } else {
     res.status(200).json(games);
@@ -37,22 +42,17 @@ router.get("/genres", (req, res) => {
     );
 });
 
-router.get("/games/:id", (req, res) => {
-  const foundGame = games.find((game) => game.id === +req.params.id);
-  if (foundGame) {
-    res.status(200).json(foundGame);
-  } else {
-    res.status(200).json({});
-  }
+router.get("/basket", (req, res) => {
+  const game = games.slice(0, 6);
+  res.status(200).json(game);
 });
 
-router.get("/carousel", (req, res) => {
+router.get("/games/:id", (req, res) => {
   client
-    .query("SELECT title, image, id FROM games ORDER BY RAND() LIMIT 6 ")
-    .then((dataCarousel) => {
-      res.status(200).json(dataCarousel[0]);
-    });
+    .query("SELECT * FROM games WHERE id = ?", [req.params.id])
+    .then((result) => res.status(200).json(result[0][0]));
 });
+
 /* ************************************************************************* */
 
 module.exports = router;

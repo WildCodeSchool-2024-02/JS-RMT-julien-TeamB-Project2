@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import axios from "axios";
 // eslint-disable-next-line import/no-unresolved
-import { Toaster } from 'sonner';
+import { Toaster } from "sonner";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <App />,
     loader: () =>
       axios
-        .get(`${import.meta.env.VITE_API_URL}/api/carousel`)
+        .get(`${import.meta.env.VITE_API_URL}/api/games?type=carousel`)
         .then((res) => res.data),
   },
   {
