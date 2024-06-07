@@ -1,0 +1,90 @@
+.newsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem;
+}
+
+.newsSectionTitle {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-title-h1);
+  color: var(--color-text);
+}
+
+.newsCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-content: center;
+}
+
+.newsLink {
+  text-decoration: none;
+  color: inherit;
+  max-width: 30rem;
+}
+
+.newsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background: var(--bg-color-main);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  max-height: 50rem;
+  min-height: 35rem;
+}
+
+.newsItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px var(--color-text);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.newsItem img {
+  object-fit: cover;
+  background-size: contain;
+  max-width: 25rem;
+  min-width: 25rem;
+  max-height: 15rem;
+  min-height: 15rem;
+  display: block;
+}
+
+.newsItem h3 {
+  font-family: "AppleGaramondBoldItalic";
+  font-size: var(--font-size-title-h2);
+  margin: 0.5em 0;
+  color: var(--color-text);
+  padding: 0.5rem;
+}
+
+.newsItem p {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-text);
+  margin: 0.5em 0;
+  color: var(--color-text);
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .newsCard {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .newsLink {
+    max-width: 30rem;
+  }
+  .newsItem img {
+    max-width: 25rem;
+    min-width: 25rem;
+    max-height: 20rem;
+    min-height: 20rem;
+  }
+}

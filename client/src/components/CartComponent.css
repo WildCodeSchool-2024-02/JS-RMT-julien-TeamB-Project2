@@ -1,0 +1,79 @@
+.cartMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-text);
+  h3 {
+    margin: 2rem;
+  }
+}
+
+.cartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 8rem;
+  border: solid 1px var(--button-color-border);
+  margin: 1.5rem;
+  border-radius: 2rem;
+  padding: 1rem;
+  .cartImg {
+    height: 6.2rem;
+    width: 6.2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+  h2 {
+    margin: 0 1rem;
+  }
+}
+
+.cartContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8rem;
+}
+
+.cartTitleButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70rem;
+  padding: 2rem;
+}
+
+.cartButtonDelete:hover {
+  transform: scale(1.1);
+}
+
+.cartSelectQuantite {
+  background: var(--color-text);
+}
+
+.cartQuantiteNumber {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+@media (max-width: 768px) {
+  .cartContainer {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    h2 {
+      font-size: var(--font-size-text);
+    }
+  }
+  .cartContent {
+    padding: 2rem;
+    gap: 3rem;
+  }
+  .cartTitleButton {
+    gap: 15rem;
+  }
+}

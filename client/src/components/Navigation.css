@@ -1,0 +1,55 @@
+.navBg {
+  background-image: var(--bg-color-nav);
+}
+
+.navContainer {
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  li {
+    list-style-type: none;
+  }
+}
+
+.navLogoSize {
+  max-width: 5rem;
+}
+
+.navLogoSize:hover {
+  transform: var(--logo-transform);
+}
+
+.burgerButton {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.625rem 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    top: auto;
+  }
+  .navButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    .navLogoSize {
+      max-width: 3rem;
+    }
+  }
+}
