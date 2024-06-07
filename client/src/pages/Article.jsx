@@ -2,8 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import ArticleComponents from "../components/ArticleComponents";
 import VideoGames from "../components/VideoGames";
 import Footer from "../components/Footer";
-import "../App.css";
 import Navigation from "../components/Navigation";
+import "../App.css";
 
 function Article() {
   const game = useLoaderData();

@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <main className="bgColorMain">
+    <main className="bgColorMain bgSizeWeb">
       <Navigation />
       <Carousel />
       <NewsCard />

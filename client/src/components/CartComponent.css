@@ -39,7 +39,9 @@
 
 .cartTitleButton {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 70rem;
   padding: 2rem;
 }
 
@@ -67,9 +69,11 @@
       font-size: var(--font-size-text);
     }
   }
-
   .cartContent {
     padding: 2rem;
     gap: 3rem;
+  }
+  .cartTitleButton {
+    gap: 15rem;
   }
 }

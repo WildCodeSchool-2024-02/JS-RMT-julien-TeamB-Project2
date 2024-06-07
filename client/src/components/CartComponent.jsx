@@ -1,9 +1,9 @@
 // eslint-disable-next-line import/no-unresolved
-import { toast } from 'sonner';
-import "./CartComponent.css";
+import { toast } from "sonner";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import addGameIcon from "../assets/images/addGameIcon.png";
+import "./CartComponent.css";
 
 function CartComponent({ game }) {
   const { updateQuantity, handleGameInCart } = useCart();
